@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+:root {
+/* COLOR */
+  @each $color, $shade in $colors {
+    @each $prop, $value in $shade {
+      // @debug $color, $prop, $value;
+      --clr-#{$color}-#{$prop}: #{$value};
+
+      .txt-#{$color}-#{$prop} { color: var(--clr-#{$color}-#{$prop}) !important; }
+      .bg-#{$color}-#{$prop} { background-color: var(--clr-#{$color}-#{$prop}) !important; }
+    }
+  }
+
+/* TYPE */
+  @each $scale, $level in $scales {
+    @each $prop, $value in $level {
+      // @debug map-get($value, sm);
+      --fs-#{$scale}-#{$prop}: #{map-get($value, sm)};
+      .#{$scale}-#{$prop} { font-size: var(--fs-#{$scale}-#{$prop}); }
+    }
+
+    @include breakpoint ('tablet_1') {
+      @each $prop, $value in $level {
+        --fs-#{$scale}-#{$prop}: #{map-get($value, lg)};
+      }
+    }
+  } 
+
+}

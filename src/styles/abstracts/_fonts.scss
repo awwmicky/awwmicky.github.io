@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'FiraCode-Regular';
+  src: url('../fonts/FiraCode-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'RobotoMono-Regular';
+  src: url('../fonts/RobotoMono-Regular.ttf')  format('truetype');
+}
+
+/*  */
+
+$family: (
+  heading: ('FiraCode-Regular', sans-serif),
+  body: ('RobotoMono-Regular', monospace)
+);
+
+$weight: (
+  light: 200,
+  regular: 400,
+  bold: 600
+);
+
+$leading: (
+  small: 0.5,
+  normal: 1.15,
+  large: 1.5
+);
+
+$scales: (
+  heading: (
+    1: (
+      sm: 3.052rem,
+      lg: 5.653rem
+    ),
+    2: (
+      sm: 0rem,
+      lg: 0rem
+    ),
+    3: (
+      sm: 0rem,
+      lg: 0rem
+    ),
+    4: (
+      sm: 0rem,
+      lg: 0rem
+    )
+  ),
+  body: (
+    large: (
+      sm: 0rem,
+      lg: 0rem
+    ),
+    medium: (
+      sm: 1.125rem,
+      lg: 1.25rem
+    ),
+    base: (
+      sm: 1rem,
+      lg: 1rem
+    ),
+    caption: (
+      sm: 0rem,
+      lg: 0rem
+    ),
+    small: (
+      sm: 0rem,
+      lg: 0rem
+    )
+  )
+);

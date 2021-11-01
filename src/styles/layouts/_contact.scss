@@ -1,0 +1,56 @@
+@use '../abstracts/' as *;
+
+#contact {
+  padding: 5rem 0;
+}
+
+.banner {
+  border-radius: 12px;
+  padding: 5rem 1rem;
+  text-align: center;
+  background-color: #efebfa;
+  box-shadow: 0px 0px 20px #00000028;
+
+  & .b-intro {
+    font-size: 0.9rem;
+  }
+
+  & .b-heading {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  & .b-tooltip {
+    color: #BCB4B4;
+  }
+
+  & .b-options {
+    margin-top: 1.4em;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    max-width: 90vw;
+  }
+}
+
+
+
+@include breakpoint (tablet_1) {
+  .banner {
+    & .b-intro {
+      font-size: 1.125rem;
+    }
+
+    & .b-heading {
+      font-size: 1.85rem;
+    }
+
+    & .b-options {
+      flex-flow: row;
+      place-content: center;
+    }
+  }
+}
+
+// btn w: 195px -> 235px
+// btn h: 53px -> 63px

@@ -1,0 +1,10 @@
+@use '../abstracts/' as *;
+@use '../base' as *;
+
+.container {
+  // border: 1px solid #000;
+  width: $fixed-sides;
+  max-width: $fixed-page;
+  margin: 0 auto;
+  // padding: 0 $fixed-sides;
+}

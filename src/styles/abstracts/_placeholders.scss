@@ -1,0 +1,53 @@
+/* Placeholders */
+@use './variables' as *;
+@use './mixins' as *;
+
+// %sides { padding: $fixed-sides; }
+
+%center {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  // justify-content: center;
+}
+
+%flex-fill { flex: 1 1 auto; }
+
+%img {
+  object-fit: cover;
+  object-position: center;
+}
+
+%bg-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+%state-change {
+
+  transition: map-get($motion, medium);
+  transition-property: transform;
+  box-shadow: map-get($shadow, before);
+
+  @include psuedo-element () {
+    transition: map-get($motion, medium);
+    transition-property: transform;
+    box-shadow: map-get($shadow, after);
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus 
+  { 
+    transform: scale(1.05); 
+    &::before { opacity: 1; }
+  }
+  &:active { transform: scale(0.95); }
+}
+
+%truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

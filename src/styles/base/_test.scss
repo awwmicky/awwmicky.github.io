@@ -1,0 +1,8 @@
+/* Test */
+
+// html, 
+body { border: 3px solid darkslategray; }
+// body *, .b *, .b { border: 2px solid silver; }
+body *, .s *, .s { box-shadow: inset 0 0 5px silver; }
+// body *, .t *, .t { transition: 0.3s ease; }
+body *, .t *, .t { transition: 0.3s linear; }

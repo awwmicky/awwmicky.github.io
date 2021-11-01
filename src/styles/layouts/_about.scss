@@ -1,0 +1,155 @@
+@use '../abstracts/' as *;
+
+#about {
+  padding: 10rem 0;
+}
+
+#about .section-heading {
+  margin-bottom: 5rem;
+}
+
+.all-about {
+  display: flex;
+  flex-flow: column-reverse;
+  gap: 30px;
+}
+
+.card {
+  text-align: center;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem;
+  box-shadow: 0px 0px 20px #4705fc33;
+  
+  &__img {
+    @extend %img;
+    @include box (70px);
+    margin: 0 auto;
+    margin-bottom: 2em;
+    border-radius: 50%;
+  }
+
+  &__desc {
+    margin-bottom: 2em;
+  }
+  &__name {
+    font-size: 1.1625rem;
+    margin-bottom: 0.2em;
+  }
+  &__sub-title {
+    font-size: 0.75rem;
+  }
+}
+
+.info {
+  text-align: center;
+
+  &__intro {
+    font-size: 0.9rem;
+    color: #5924ed;
+    margin-bottom: 0.5625rem;
+  }
+
+  &__position {
+    font-size: 1.4rem;
+    margin-bottom: 0.75em;
+  }
+
+  &__desc {
+    line-height: 1.5;
+    margin-bottom: 1.25em;
+
+    & code {
+      font-family: 'Courier New', Courier, monospace;
+    }
+  }
+
+  &__skills {
+    margin-bottom: 0.8em;
+     
+    & dd {
+      margin-bottom: 0.8em;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+    margin-top: 1em;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-flow: wrap;
+  // place-content: space-between;
+  place-content: space-around;
+  gap: 1em;
+  margin-top: 1.5em;
+
+  .timestamp {
+    width: 45%;
+    max-width: 200px;
+  }
+  
+  time {
+    font-family: map-get($family, heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+#bounce {
+  display: inline-block;
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+	40% { transform: translateY(-15px); }
+	60% { transform: translateY(-10px); }
+}
+
+@include breakpoint (tablet_1) {
+  .all-about {
+    flex-flow: row;
+    place-items: center;
+  }
+
+  .card {
+    &__desc {
+      font-size: 1rem;
+      max-width: 125ch;
+    }
+
+    &__name {
+      font-size: 1.25rem;
+    }
+
+    &__sub-title {
+      font-size: 0.8rem;
+    }
+  }
+  
+  .info {
+    text-align: initial;
+    
+    &__intro {
+      font-size: 1rem;
+    }
+
+    &__position {
+      font-size: 1.5rem;
+    }
+
+    &__desc {
+      font-size: 1rem;
+      max-width: 325ch;
+    }
+
+    &__options {
+      flex-flow: row;
+    }
+  }
+}

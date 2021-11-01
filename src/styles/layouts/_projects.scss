@@ -1,0 +1,151 @@
+@use '../abstracts/' as *;
+
+#projects {
+  width: 100%;
+  padding: 10rem 0;
+}
+
+#projects .section-heading {
+  margin-bottom: 5rem;
+}
+
+.all-projects {
+  display: flex;
+  flex-flow: column;
+  gap: 9em;
+}
+
+.p-item {
+  display: flex;
+  flex-flow: column;
+  place-items: center;
+  max-width: 850px;
+
+  & > div {
+    border-radius: 12px;
+  }
+
+  &:hover .p-image {
+    transform: scale(1.1);
+  }
+}
+
+.p-thumbnail {
+  height: 500px;
+  box-shadow: 0px 0px 20px #4705fc33;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.3s ease transform;
+
+  @include psuedo-element () {
+    background-color: #5a24ed38;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  & .p-image { 
+    transition: 0.3s ease;
+    @extend %img;
+    height: 100%;
+  }
+}
+
+.p-content {
+  width: 90%;
+  background-color: #efebfa;
+  padding: 3rem 2rem;
+  z-index: 2;
+  margin-top: -150px;
+  box-shadow: 0px 0px 20px #00000028;
+
+  & .p-title {
+    font-size: 1.35rem;
+    color: #0d081a;
+    margin-bottom: 1em;
+  }
+
+  & .p-sub-title {
+    font-size: 0.9rem;
+    color: #0d081a;
+    margin-bottom: 2em;
+  }
+
+  & .p-desc {
+    font-size: 0.9rem;
+    color: #48464b;
+    margin-bottom: 2.5em;
+  }
+
+  & .p-tech, 
+  & .p-roles
+  {
+    display: flex;
+    flex-flow: wrap;
+    color: #48464b;
+  }
+
+  & .p-options {
+    display: flex;
+    flex-flow: column;
+    place-items: stretch;
+    gap: 1.25em;
+    color: #48464b;
+
+    & .btn {
+      display: flex;
+      place-items: center;
+      place-content: center;
+      gap: 0.75em;
+    }
+  }
+}
+
+@include breakpoint (tablet_1) {
+  .p-content {
+    & .p-options {
+      flex-flow: row;
+    }
+  }
+}
+
+@include breakpoint (tablet_2) {
+  .p-odd {
+    flex-flow: row;
+    & .p-content {
+      margin-left: -150px;
+    }
+  }
+
+  .p-even {
+    flex-flow: row-reverse;
+    & .p-content {
+      margin-right: -150px;
+    }
+  }
+
+  .p-item {
+    // flex-flow: row;
+    margin: 0 auto;
+  }
+
+  .p-content {
+    margin-top: 0;
+
+    // margin-left: -150px;
+
+    & .p-title {
+      font-size: 1.6rem;
+    }
+
+    & .p-sub-title {
+      font-size: 1rem;
+    }
+
+    & .p-desc {
+      font-size: 1rem;
+    }
+  }
+}

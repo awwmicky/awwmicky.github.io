@@ -1,0 +1,12 @@
+package-lock.json
+/node_modules
+
+/.firebase
+/.parcel-cache
+/.cache
+/dist
+
+# /docs
+/archive
+# /other
+# /test

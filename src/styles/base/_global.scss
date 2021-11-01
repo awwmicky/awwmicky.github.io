@@ -1,0 +1,15 @@
+@use '../abstracts/colors';
+@use '../abstracts' as *;
+
+$dominant: var(--clr-primary-400);
+$relative: var(--clr-primary-200);
+$accent: var(--clr-secondary-400);
+
+$interactive: var(--clr-alternative-interactive);
+$success: var(--clr-alternative-success);
+$warning: var(--clr-alternative-warning);
+$error: var(--clr-alternative-error);
+$disabled: var(--clr-alternative-disabled);
+
+$fixed-sides: 90%;
+$fixed-page: 1080px;

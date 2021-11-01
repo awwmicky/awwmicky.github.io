@@ -1,0 +1,45 @@
+@use '../abstracts/' as *;
+
+.favicon {
+  @include box (40px);
+}
+
+.t-icon {
+  @include box (40px);
+  filter: grayscale(100%);
+  &:hover { filter: initial; }
+}
+
+// .react:hover { color: #61DAFB; }
+// .sass:hover { color: #CC6699; }
+// .js:hover { color: #F7DF1E; }
+// .ts:hover { color: #007ACC; }
+// .bootstrap:hover { color: #9013FE; }
+// .material-ui:hover { color: #0081CB; }
+.storybook:hover { color: #F0608A; }
+// .webpack:hover { color: #8DD6F9; }
+// .html:hover { color: #E44D26; }
+// .css:hover { color: #1572B6; }
+
+// .figma:hover { color: #F24E1E; }
+// .invision:hover { color: #FF3366; }
+// .hotjar:hover { color: #F53859; }
+// .xd:hover { color: #DD80BC; }
+
+// .git:hover { color: #F34F29; }
+// .github:hover { color: #161B22; }
+// .vscode:hover { color: #0078d7; } 
+.md:hover { color: #343A40; } 
+// .google:hover { color: #1a73e8; }
+
+/*  
+.nodejs:hover { color: #83CD29; }
+.express:hover { color: #3C873A; }
+.mongodb:hover { color: #589636; }
+.mysql:hover { color: #00618A; }
+
+.devtool:hover { color: #F8C63D; }
+.npm:hover { color: #cb3837; }
+.heroku:hover { color: #6762a6; }
+.firebase:hover { color: #FFA611; }
+*/

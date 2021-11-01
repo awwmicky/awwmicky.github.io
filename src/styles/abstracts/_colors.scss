@@ -1,0 +1,21 @@
+$colors: (
+  primary: (
+    400: hsl(222, 84%, 64%)
+  ),
+  secondary: (
+    400: hsl(311, 100%, 45%),
+  ),
+  neutral: (
+    100: hsl(0, 0%, 100%),
+    400: hsl(212, 6%, 48%),
+    800: hsl(214, 8%, 17%),
+    900: hsl(200, 5%, 11%)
+  ),
+  alternative: (
+    interactive: hsl(240, 100%, 70%),
+    success: hsl(120, 100%, 40%),
+    warning: hsl(51, 100%, 50%),
+    error: hsl(0, 100%, 50%),
+    disabled: hsl(0, 0%, 80%)
+  )
+);

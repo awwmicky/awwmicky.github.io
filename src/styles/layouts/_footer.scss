@@ -1,0 +1,87 @@
+@use '../abstracts/' as *;
+
+.all-links,
+.copyright
+{ 
+  width: 100%; 
+  color: rgb(242, 240, 237);
+}
+
+.all-links {
+  background-color: rgb(51, 30, 114);
+ 
+  & .l-desc {
+    max-width: 50ch;
+    margin-top: 1em;
+  }
+
+  & .l-heading {
+    font-size: 1.125rem;
+    margin-bottom: 1em;
+  }
+
+  & .l-list a {
+    display: block;
+    padding: 0.5em;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: #fff;
+      color: rgb(51, 30, 114);
+    }
+  }
+
+  & .l-list [href*="mailto:"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.all-links > div {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 10em 0 5em;
+}
+
+.copyright {
+  background-color: rgb(39, 26, 78);
+  
+  span {
+    display: block;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1em;
+  }
+}
+
+@include breakpoint (tablet_1) {
+  .all-links > div {
+    flex-flow: row;
+  }
+
+  .all-links {
+    & .l-desc {
+      max-width: 51ch;
+    }
+    
+    & .l-heading {
+      font-size: 1.25rem;
+    }
+    
+    & .l-list a {
+      font-size: 1rem;
+    }
+
+    & .col:not(:first-child) {
+      width: 30%;
+    }
+
+    // & .l-list [href*="mailto:"] {}
+  }
+
+  .copyright span {
+    font-size: 0.9rem;
+  }
+}

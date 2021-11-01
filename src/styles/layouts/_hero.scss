@@ -1,0 +1,157 @@
+@use '../abstracts/' as *;
+
+#hero {
+  width: 100%;
+  padding: 5em 0;
+}
+
+
+// .hero-content > * + * {
+  //   margin-top: 1em;
+// }
+
+#hero > div {
+  display: flex;
+  flex-flow: column;
+  gap: 2em
+}
+
+.hero-content {
+  // margin-bottom: 2em;
+  text-align: center;
+
+  & .hero-intro {
+    font-size: 1.0625rem; 
+    color: #5924ed;
+    margin-bottom: 1em;
+
+    & .name {
+      display: block;
+    }
+  }
+
+  & .hero-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.75em;
+  }
+
+  & .hero-desc {
+    margin-bottom: 1.5em;
+  //   font-size: 1.0625rem;
+  //   line-height: 1.6;
+  }
+
+  .hero-options {
+    display: flex;
+    flex-flow: column;
+    place-items: stretch;
+    gap: 1.25em;
+    
+    // & .btn {
+    //   padding: 0.6625em 1.4em;
+    // }
+  }
+}
+
+.hero-profile {
+  overflow: hidden;
+  // background-color: #5a24ed38;
+  box-shadow: 0px 0px 20px #4705fc33;
+  border-radius: 12px;
+
+  // & .hero-image {
+  & img {
+    // @extend %img;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    object-position: center 35%;  
+  }
+}
+
+#underscore {
+  font-weight: 900;
+  // animation: 1s blink step-end infinite;
+  // animation-name: underscore_animation;
+  // animation-duration: 1s;
+}
+
+@keyframes underscore_animation {
+  from { color: transparent; }
+  50% { color: black; }
+  to { color: transparent; }
+}
+
+#wave {
+  animation-name: wave_animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave_animation {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+@include breakpoint (tablet_1) {
+  #hero > div {
+    flex-flow: row;
+  }
+
+  .hero-content {
+    flex: 2;
+    text-align: initial;
+
+    & .hero-intro {
+      font-size: 1.25rem;
+
+      & .name {
+        display: none;
+      }
+    }
+
+    & .hero-title {
+      font-size: 3rem;
+    }
+
+    & .hero-desc {
+      font-size: 1.25rem;
+      max-width: 50.5ch;
+    }
+    
+    & .hero-options {
+      flex-flow: row;
+    }
+  }
+
+  .hero-profile {
+    flex: 1.25;
+    // max-width: 400px;
+    
+    & .hero-image {
+      height: 100%;
+      max-height: initial;
+    }
+  }
+}
+
+@include breakpoint (tablet_2) {
+  .hero-content {
+    place-self: center;
+  }
+
+  .hero-profile {
+    & .hero-image {
+      height: 600px;
+    }
+  }
+}

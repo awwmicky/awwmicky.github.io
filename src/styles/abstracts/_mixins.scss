@@ -1,0 +1,242 @@
+@use './variables' as *;
+
+@mixin box ($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/* Media Query */
+@mixin breakpoint ($key, $pre: min) {
+  $size: map-get($breakpoints, $key);
+  @if $pre == max { $size: $size - 1px; }
+  // @media only screen and (min-width: $size) { @content; }
+  @media only screen and (#{$pre}-width: $size) { @content; }
+}
+
+/* Psuedo-Element */
+@mixin psuedo-element (
+  $content: '', $element: 'before', $position: absolute,
+  $top: 0, $right: 0, $bottom: 0, $left: 0
+) {
+
+  position: relative;
+  
+  &::#{ $element } {
+    content: "#{ $content }";
+    position: $position;
+    @content;
+  }
+}
+
+@mixin position ($position, $args) {
+  
+  position: $position;
+  
+  @each $order in (top right bottom left) {
+    $i: index($args, $order);
+
+    @if $i and $i + 1 <= length($args) 
+    and type-of(nth($args, $i + 1)) == number 
+    { #{$order}: nth($args, $i + 1); }
+  }
+}
+
+/*  */
+
+@mixin center ($orientation: false, $direction: column) {
+  display: flex;
+  flex-flow: $direction;
+
+  @if $orientation == vertical { align-items: center; }
+  @else if $orientation == horizontal { justify-content: center; }
+  @else { align-items: center; justify-content: center; }
+}
+
+/* Text Content */
+@mixin text-styling (
+  $color: false, $family: false, $size: false, 
+  $weight: false, $leading: false, $tracking: false,
+  $style: false, $stretch: false, $variant: false
+) {
+  @if $color    { color: $color; }
+  @if $family   { font-family: $family; }
+  @if $size     { font-size: $size; }
+  @if $weight   { font-weight: $weight; }
+  @if $leading  { line-height: $leading; }
+  @if $tracking { letter-spacing: $tracking; }
+  @if $style    { font-style: $style; }
+  @if $stretch  { font-stretch: $stretch; }
+  @if $variant  { font-variant: $variant; }
+}
+
+@mixin text-adjust (
+  $alignment: false, $transform: false, $decoration: false,
+  $shadow: false, $indent: false, $overflow: false
+) {
+  @if $alignment  { text-align: $alignment; }
+  @if $transform  { text-transform: $transform; }
+  @if $decoration { text-decoration: $decoration; }
+  @if $shadow     { text-shadow: $shadow; }
+  @if $indent     { text-indent: $indent; }
+  @if $overflow   { text-overflow: $overflow; }
+}
+
+@mixin word-adjust (
+  $spacing: false, $break: false, $white-space: false
+) {
+  @if $spacing  { word-spacing: $spacing; }
+  @if $break    { word-break: $break; }
+  @if $white-space { white-space: $white-space; }
+}
+
+@mixin spacing ($gap, $position) {
+
+  @if map-has-key($spacing, $gap) {
+    $gap: map-get($spacing, $gap);
+  }
+  
+  @if $position == top { > * + * { margin-top: $gap; } }
+  @if $position == right { > * + * { margin-right: $gap; } }
+  @if $position == bottom { > * + * { margin-bottom: $gap; } }
+  @if $position == left { > * + * { margin-left: $gap; } }
+  @if $position == vertical {
+    // margin-block: $gap;
+    margin-block-start: $gap;
+    margin-block-end: $gap;
+  }
+  @if $position == horizontal {
+    // margin-inline: $gap;
+    margin-inline-start: $gap;
+    margin-inline-end: $gap;
+  }
+}
+
+@mixin radius ($size, $position) {
+
+  @if map-has-key($radius, $size) {
+    $size: map-get($radius, $size);
+  }
+  
+  @if $position == top { border-radius: $size $size 0 0; }
+  @if $position == right { border-radius: 0 $size $size 0; }
+  @if $position == bottom { border-radius: 0 0 $size $size; }
+  @if $position == left { border-radius: $size 0 0 $size; }
+}
+
+@mixin gradient ($start-color, $end-color, $orientation: false) {
+
+  background: $start-color;
+  
+  @if $orientation == 'vertical' {
+    background-image: linear-gradient(to bottom, $start-color, $end-color);
+  } 
+  @else if $orientation == 'horizontal' {
+    background-image: linear-gradient(to right, $start-color, $end-color);
+  } 
+  @else {
+    background-image: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+
+
+/*  */
+
+@mixin aspect-ratio ($x, $y) {
+  
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    padding-top: ( $y / $x ) * 100%;
+    display: block;
+  }
+
+  & > .aspect-ratio  {
+    position: absolute;
+    inset: 0 0 0 0;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // bottom: 0;
+  }
+}
+
+@mixin shape ($shape, $size: 25px, $color: transparent) {
+
+	@if $shape == square {
+		width: $size;
+		height: $size;
+		background-color: $color;
+	}
+	
+	@if $shape == circle {
+		width: $size;
+		height: $size;
+		background-color: $color;
+		border-radius: 50%;
+	}
+	
+	@if $shape == triangle {
+		width: 0;
+		height: 0;
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: ($size * 1.5) solid $color;
+	}
+	
+	@if $shape == right-triangle {
+		width: 0;
+		height: 0;
+		border-bottom: $size solid $color;
+		border-right: $size solid transparent;
+	}
+}
+
+@mixin triangle ($direction, $color: black, $size: 1em) {
+  
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`";
+  }
+
+  width: 0;
+  height: 0;
+  z-index: 2;
+
+  border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+  $perpendicular-borders: $size solid transparent;
+  
+  @if $direction == top or $direction == bottom {
+    border-left:   $perpendicular-borders;
+    border-right:  $perpendicular-borders;
+  } @else if $direction == right or $direction == left {
+    border-top:    $perpendicular-borders;
+    border-bottom: $perpendicular-borders;
+  }
+}
+
+// @mixin input-placeholder { &::-webkit-input-placeholder { @content; } }
+// @mixin scrollbar {}
+// @mixin selection {}
+
+/*  */
+
+@mixin placeholder (
+  $width, $height, $name: false , $color: darkgray
+) {
+  border: 2px solid $color;
+  background-color: lighten($color, 16.5%);
+  width: $width;
+  height: $height;
+  
+  @if not ($name) or $name == "" { 
+    $name: "#{ $width } x #{ $height }"; 
+  }
+
+  @include psuedo-element ($content: $name) {
+    top: 50%;
+    left: 50%;
+    // inset: 50% 0 0 50%;
+    transform: translate(-50%, -50%);
+  }
+}

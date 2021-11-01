@@ -1,0 +1,149 @@
+/* Reset */
+@use '../abstracts' as *;
+
+/*  
+p: hsl(204, 23.8%, 95.9)
+ac1: hsl(205.1, 100%, 36.1%)
+btn: hsl(205.1, 100%, 36.1%)
+bg1: #0f1624
+bg hsl(232.7, 27.3%, 23.7%)
+*/
+
+*, *::before, *::after 
+{ box-sizing: inherit; }
+
+html {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body, #root {
+  // background: hsl(0, 0%, 93%);
+  background: #efebfa;
+  // height: 100%;
+  min-height: 100%;
+  // min-height: 100vh;
+}
+
+/*  */
+
+body, header, main, footer, nav, aside,
+article, section, blockquote, details,
+form, fieldset, figure, figcaption, div
+{ display: block; margin: unset; }
+
+h1,h2,h3,h4,h5,h6,p,ul,ol,dl { margin: unset; }
+dd { margin-left: unset; }
+// dt li
+
+/*  */
+
+button * { pointer-events: none; }
+
+i[role="img"] { font-style: unset; }
+
+a[role="button"] { display: inline-block; }
+
+// fieldset { border: unset; }
+
+legend { display: table; }
+
+blockquote, q { quotes: none; }
+
+blockquote::before, q::before,
+blockquote::after, q::after
+{ content: ''; content: none; }
+
+a {
+  color: inherit;
+  text-decoration: unset;
+}
+
+ul[role="list"],
+ol[role="list"]
+{ 
+  padding-left: unset; 
+  list-style: none;
+}
+
+img,
+picture 
+{ 
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  border-collapse: collapse; 
+  table-layout: fixed;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/*  */
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea { 
+  resize: none; 
+  vertical-align: top; 
+}
+
+input,
+select,
+optgroup,
+option,
+textarea,
+button,
+input[type="button"],
+input[type="submit"]
+{ 
+  margin: unset;
+  font: inherit;
+  line-height: 1.15;
+  letter-spacing: 0.015em;
+  display: inline-block;
+  /* border: none; */
+}
+
+details,
+select,
+button,
+input[type="button"],
+input[type="submit"]
+{ cursor: pointer; }
+
+summary:focus,
+select:focus,
+input:focus,
+button:focus,
+textarea:focus
+{ outline: none; }
+
+input[type="checkbox"],
+input[type="radio"] 
+{
+  width: 1rem; 
+  height: 1rem;
+  vertical-align: text-bottom;
+  cursor: pointer;
+  /* display: none; */
+}
+
+/*  */
+
+noscript { 
+  font-weight: 900;
+  text-align: center;
+  margin: 1em;
+}
+
+// [title] { color: #212121; }
+[hidden] { display: none !important; }
+[disabled] { background: #00000000; }

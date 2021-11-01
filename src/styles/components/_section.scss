@@ -1,0 +1,17 @@
+// .section-caption {}
+
+.section-heading {
+  // font-size: 5rem;
+  // font-size: 2rem;
+  font-size: clamp(2rem, 10vw, 5rem);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  // margin-bottom: 10rem;
+}
+
+.section-sub-heading {
+  font-size: 1.75rem;
+  text-align: center;
+}

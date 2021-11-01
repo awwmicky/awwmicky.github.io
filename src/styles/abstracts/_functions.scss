@@ -1,0 +1,28 @@
+/* Functions */
+@use './variables' as *;
+
+@function font-size($size, $base: 16) {
+  @return ($size / $base) * 1rem;
+}
+
+@function half($num) {
+  @return $num / 2;
+}
+
+@function negative($num) {
+  @return 0 - $num;
+}
+
+@function half-negative($num) {
+  @return negative(half($num));
+}
+
+@function z-index($name, $z-indexes-list: $z-indexes) {
+  @if index($z-indexes-list, $name) {
+    // @debug length($z-indexes-list), index($z-indexes-list, $name);
+    @return (length($z-indexes-list) - index($z-indexes-list, $name)) + 1;
+  } @else {
+    @warn 'There is no item "#{$name}" in the list, #{$z-indexes-list};';
+    @return null;
+  }
+}

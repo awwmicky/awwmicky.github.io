@@ -1,0 +1,41 @@
+/* Typography */
+@use '../abstracts/fonts';
+@use '../abstracts' as *;
+
+body {
+  color: hsl(0, 0%, 33%);
+  // color: hsl(0, 0%, 93%);
+  // font: 400 1rem/1.5 map-get($family, body);
+  font: 400 0.9rem map-get($family, body);
+  letter-spacing: 0.025em;
+}
+
+// .link { 
+//   color: var(--clr-alternative-interactive);
+//   font-size: var(--fs-body-base); 
+// }
+
+// b, .b { font-weight: 600; }
+// small { font-size: var(--fs-body-small); }
+
+.h1 { font-size: var(--fs-heading-1); }
+.h2 { font-size: var(--fs-heading-2); }
+.h3 { font-size: var(--fs-heading-3); }
+.h4 { font-size: var(--fs-heading-4); }
+
+.txt-lg { font-size: var(--fs-body-large); }
+.txt-md { font-size: var(--fs-body-medium); }
+.txt-base { font-size: var(--fs-body-base); }
+.txt-cap { font-size: var(--fs-body-caption); }
+.txt-sm { font-size: var(--fs-body-small); }
+
+// h1, h2, h3 {
+//   @include text-styling (
+//     hsl(0, 0%, 20%),
+//     // #fff,
+//     map-get($family, heading),
+//     var(--fs-heading-1),
+//     map-get($weight, bold),
+//     map-get($leading, normal)
+//   );
+// }

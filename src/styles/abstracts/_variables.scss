@@ -1,0 +1,46 @@
+/* Variables */
+
+$z-indexes: (
+  'header',
+  'nav',
+  'content',
+  'footer'
+);
+
+$breakpoints: (
+  mobile   : 375px,
+  tablet_1 : 768px,
+  tablet_2 : 1024px,
+  desktop  : 1440px
+);
+
+$spacing: (
+  xs: 0em,
+  sm: 0em,
+  md: 1em,
+  lg: 0em,
+  xl: 0em
+);
+
+$radius: (
+  circle : 50%,
+  pill   : 1.5em,
+  round  : (
+    tight  : 0.5em,
+    normal : 1em,
+    loose  : 1.5em
+  )
+);
+
+$motion: (
+  slow    : 0.45s ease,
+  normal  : 0.3s ease,
+  fast    : 0.15s ease
+);
+
+$shadow: (
+  1: 0 0.25em 0.5em rgba(0, 0, 0, 0.2),
+  2: 0 0 1.25em 0 rgba(0, 0, 0, 0.4)
+);
+
+// $gradient: ();
