@@ -12,7 +12,7 @@ interface CopyEvent {
 }
 
 // e: MouseEvent + HTMLButtonElement
-export default function copyToClipboard (e: MouseEvent) {
+const copyToClipboard = (e: MouseEvent) => {
   const DISABLED: string = 'disabled'
   const SUCCESS: string = 'success'
   const TIME: number = 1200
@@ -43,3 +43,5 @@ export default function copyToClipboard (e: MouseEvent) {
     setTimeout(resetChange, TIME)
   }
 }
+
+export { copyToClipboard }
