@@ -24,6 +24,8 @@
   // &:nth-child(1) > .t-body { border-top: 5px solid rgba(8, 69, 240, 0.354); }
   // &:nth-child(2) > .t-body { border-top: 5px solid rgba(100, 95, 240, 0.465); }
   // &:nth-child(3) > .t-body { border-top: 5px solid rgba(203, 190, 240, 0.776); }
+
+  &:hover .t-icon { filter: initial; }
 }
 
 .t-head {

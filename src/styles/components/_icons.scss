@@ -7,7 +7,7 @@
 .t-icon {
   @include box (40px);
   filter: grayscale(100%);
-  &:hover { filter: initial; }
+  // &:hover { filter: initial; }
 }
 
 // .react:hover { color: #61DAFB; }
@@ -16,7 +16,7 @@
 // .ts:hover { color: #007ACC; }
 // .bootstrap:hover { color: #9013FE; }
 // .material-ui:hover { color: #0081CB; }
-.storybook:hover { color: #F0608A; }
+// .storybook:hover { color: #F0608A; }
 // .webpack:hover { color: #8DD6F9; }
 // .html:hover { color: #E44D26; }
 // .css:hover { color: #1572B6; }
