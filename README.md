@@ -28,10 +28,9 @@
   </tr>
   <tr>
     <td>Phone</td>
-      <!-- href="https://aww-micky.web.app/phone.html" -->
     <td><a 
       target="_self"
-      href="tel:6504343407"
+      href="https://aww-micky.web.app/phone.html"
     >650-434-3407
     </a></td>
   </tr>
