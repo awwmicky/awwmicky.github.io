@@ -1,4 +1,4 @@
-import { print } from '../utilities'
+// import { print } from '../utilities'
 
 const viewItem = (e: MouseEvent) => {
   e.preventDefault()
@@ -17,7 +17,7 @@ const viewItem = (e: MouseEvent) => {
       window.open(pdfLink, '_blank')
     break;
     case 'view-contact':
-      window.location.href = 'mailto:michael_fred_alvarez@yahoo.com'
+      window.location.href = 'mailto:m-f-alvarez@outlook.com'
     break;
     default: break;
   }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>My Phone Number</title>
+<!-- CSS -->
+<style>
+/* === RESET === */
+*, *::before, *::after {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%; height: 100%;
+    font: 1rem sans-serif;
+}
+
+body {
+    /* background:#eee; */
+    color: #333;
+    line-height: 1;
+    letter-spacing: .05em;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === STYLE === */
+
+h1 { margin-bottom: 0.25em; }
+#cv { margin-top: 2.25em; }
+
+/*  */
+
+a {
+    --light: #f5f7fa;
+    --neutral: #e4e7eb;
+    --dark: #cbd2d9;
+    --c-border: #9aa5b1;
+    --c-shadow: #e4e1ef;
+
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+#phone::before,
+#cv::before {
+    position: absolute;
+    left: -2rem;
+}
+
+/*  */
+
+#phone::before { content: "\1F4DE"; }
+
+#phone {
+    border: 2px solid var(--c-border);
+    background: var(--light);
+    
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: 
+        transform 150ms cubic-bezier(0, 0, 0.58, 1), 
+        background 150ms cubic-bezier(0, 0, 0.58, 1)
+    ;
+
+    font-weight: 600;
+    padding: 1.25em 2em;
+}
+
+#phone::after {
+    content: '';
+
+    background: var(--dark);
+    
+    border-radius: inherit;
+    box-shadow: 
+        0 0 0 2px var(--c-border), 
+        0 0.625em 0 0 var(--c-shadow)
+    ;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: 
+        transform 150ms cubic-bezier(0, 0, 0.58, 1), 
+        box-shadow 150ms cubic-bezier(0, 0, 0.58, 1)
+    ;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+#phone:hover {
+    background: var(--neutral);
+    transform: translate(0, 0.25em);
+}
+
+#phone:hover::after {
+    box-shadow: 
+        0 0 0 2px var(--c-border), 
+        0 0.5em 0 0 var(--c-shadow)
+    ;
+    transform: translate3d(0, 0.5em, -1em);
+}
+
+#phone:active {
+    background: var(--neutral);
+    transform: translate(0em, 0.75em);
+}
+
+#phone:active::after {
+    box-shadow: 
+        0 0 0 2px var(--c-border), 
+        0 0 var(--c-shadow)
+    ;
+    transform: translate3d(0, 0, -1em);
+}
+
+/*  */
+
+#cv::before { content: "\1F519"; }
+
+#cv { color: blue; }
+#cv:hover { text-decoration: underline; }
+</style>
+</head>
+
+<body>
+<h1>Michael F. Alvarez</h1>
+<p>call phone number:</p>
+<br/>
+<a 
+  id="phone"
+  href="tel:6504343407"
+  target="_self"
+  rel="noopener noreferrer"
+  title="Call Me"
+>(650) 434 3407</a>
+<!-- <br/> -->
+<a 
+  id="cv"
+  target="_self"
+  rel="noopener noreferrer"
+  href="/"
+>Go Back</a>
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    console.log('phone:', 6504343407)
+    window.open('tel:6504343407', '_self')
+})
+</script>
+</body>
+</html>
