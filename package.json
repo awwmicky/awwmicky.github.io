@@ -1,6 +1,6 @@
 {
-  "name": "app",
   "version": "1.0.0",
+  "name": "portfolio",
   "description": "",
   "keywords": [],
   "author": "",
@@ -14,10 +14,9 @@
     "build": "parcel build src/pages/*.html",
     "type-check": "tsc --noEmit --watch",
     "sass-check": "sass --watch dist",
-    "serve": "serve -s dist"
-  },
-  "peerDependencies": {
-    "typescript": "^4.4.4"
+    "serve": "serve -s dist",
+    "remove": "find . -name \"package-lock.json\" && find . -name \"package-lock.json\" | xargs rm -rf",
+    "postremove": "find . -name \"node_modules\" && find . -name \"node_modules\" | xargs rm -rf"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -34,16 +33,14 @@
     "@parcel/transformer-sass": "^2.0.0",
     "@parcel/transformer-typescript-tsc": "2.0.0",
     "@parcel/transformer-typescript-types": "^2.0.0",
-    "@tsconfig/recommended": "^1.0.1",
     "parcel": "2.0.0",
-    "parcel-optimizer-imagemin": "^1.0.0",
     "postcss-preset-env": "^6.7.0",
     "posthtml": "^0.16.5",
     "posthtml-include": "^1.7.2",
     "posthtml-inline-svg": "^0.2.0",
     "rimraf": "^3.0.2",
     "sass": "^1.43.4",
-    "serve": "^12.0.1",
+    "serve": "^13.0.2",
     "sharp": "^0.29.2",
     "typescript": "^4.4.4"
   }
