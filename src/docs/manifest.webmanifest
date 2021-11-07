@@ -1,0 +1,26 @@
+{
+  "short-name": "Michael F Alvarez",
+  "name": "Michael F Alvarez | Front-End Engineer, UX/UI Developer",
+  "description": "I build React UI features ready for accessibility, performance, and scalability.",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#5924ed",
+  "background_color": "#5924ed",
+  "icons": [
+    {
+      "src": "../images/icons/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "64x64 32x32 24x24 16x16"
+    },
+    { 
+      "src": "../images/icons/favicon.png",
+      "type": "image/png",
+      "sizes": "180x180 167x167 152x152 120x120"
+    },
+    {
+      "src": "../images/icons/favicon.png",
+      "type": "image/png",
+      "sizes": "512x512 192x192"
+    }
+  ]
+}
