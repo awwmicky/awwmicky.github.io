@@ -1,21 +1,29 @@
-# My Info
+# My Contact Information
 
 <table>
 <tbody>
+  <tr>
+    <td>LinkedIn</td>
+    <td><a 
+      target="_blank"
+      href="https://linkedin.com/in/awwmicky"
+    >linkedin.com/in/awwmicky
+    </a></td>
+  </tr>
+  <tr>
+    <td>Twitter</td>
+    <td><a 
+      target="_blank"
+      href="https://twitter.com/awwmicky"
+    >twitter.com/awwmicky
+    </a></td>
+  </tr>
   <tr>
     <td>GitHub</td>
     <td><a 
       target="_blank"
       href="https://github.com/awwmicky"
-    >https://github.com/awwmicky
-    </a></td>
-  </tr>
-  <tr>
-    <td>Linkedin</td>
-    <td><a 
-      target="_blank"
-      href="https://www.linkedin.com/in/awwmicky/"
-    >https://www.linkedin.com/in/awwmicky/
+    >github.com/awwmicky
     </a></td>
   </tr>
   <tr>
@@ -30,26 +38,32 @@
     <td>Phone</td>
     <td><a 
       target="_self"
-      href="https://aww-micky.web.app/phone.html"
-    >650-434-3407
+      href="https://rebrand.ly/michael-f-alvarez__phone"
+    >650-260-8682
     </a></td>
+    <!-- https://aww-micky.web.app/phone.html -->
+    <!-- https://rebrand.ly/michael-f-alvarez__phone -->
   </tr>
   <tr>
     <td>Resume</td>
     <td><a 
       target="_blank"
-      href="https://aww-micky.web.app/up_/docs/michael_f_alvarez--resume.pdf"
-    >michael_f_alvarez--resume.pdf
+      href="https://rebrand.ly/michael-f-alvarez__resume"
+    >michael-f-alvarez__resume.pdf
     </a></td>
+    <!-- https://aww-micky.web.app/up_/docs/michael-f-alvarez__resume.pdf -->
+    <!-- https://rebrand.ly/michael-f-alvarez__resume -->
   </tr>
   <tr>
     <td>Social</td>
     <td><a 
       target="_blank" 
       rel="noopener noreferrer"
-      href="https://www.google.com/search?q=@awwmicky"
+      href="https://rebrand.ly/michael-f-alvarez__social"
     >@awwmicky
     </a></td>
+    <!-- https://www.google.com/search?q=@awwmicky -->
+    <!-- https://rebrand.ly/michael-f-alvarez__social -->
   </tr>
   <tr>
     <td>Location</td>
@@ -62,3 +76,5 @@
   </tr>
 </tbody>
 </table>
+
+  <!-- "plugins": [ "postcss-preset-env" ] -->

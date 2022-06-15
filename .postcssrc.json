@@ -1,3 +1,7 @@
 {
-  "plugins": [ "postcss-preset-env" ]
+  "plugins": {
+    "postcss-import": true,
+    "postcss-url": true,
+    "postcss-custom-properties": true
+  }
 }
