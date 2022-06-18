@@ -1,49 +1,36 @@
-<div id="p-1" class="p-item p-odd">
+<div id="p-1" class="p-item odd">
   <div class="left p-thumbnail">
     <img 
       class="p-image" 
-      src="../images/example-1.png" 
+      src="../images/p-1.png"
       alt="p-1-thumbnail" 
     />
   </div>
 
   <div class="right p-content">
-    <h3 class="p-title">Arcane 404 Blog</h3>
-    <h4 class="p-sub-title">
-      Content platform about web development.
-    </h4>
-    <p class="p-desc">
-      Arcane 404 is an organization open to share the knowledge
-      and experience of web development with various posts:
-      tutorials, demos, challenges, etc. 
-    </p>
+    <h3 class="p-title">{{ title }}</h3>
+    <h4 class="p-caption">{{ caption }}</h4>
+    <p class="p-desc">{{ description }}</p>
 
-<!--
-    <ul class="p-tech" role="list">
-      <li class="label">Tech:</li>
-      <li class="p-tag">React</li>
-      <li class="p-tag">Chakra UI</li>
-      <li class="p-tag">Formik</li>
-      <li class="p-tag">Yup</li>
-      <li class="more">more</li>
-    </ul>
-    <ul class="p-roles" role="list">
-      <li class="label">Roles:</li>
-      <li class="p-position">Front-End</li>
-      <li class="p-position">Project Lead</li>
-    </ul>
-    <ul class="p-goals" role="list">
-      <li class="label">Goals:</li>
-      <li class="p-task"></li>
-    </ul>
--->
+    <details class="p-accordion">
+      <summary class="p-accordion-title">
+        <b>Read More</b>
+      </summary>
+      <dl class="p-accordion-details">
+        <dt>Roles :</dt>
+        <dd>{{ roles }}</dd>
+        <br />
+        <dt>Tech :</dt>
+        <dd>{{ tech }}</dd>
+      </dl>
+    </details>
 
     <div class="p-options">
       <a 
         role="button" 
         target="_blank"
         rel="noopener noreferrer"
-        href="https://github.com/Arcane-404/arcane-404-blog"
+        href="{{ source_code }}"
         class="btn btn--primary" 
       >
         <span>Source Code</span>
@@ -51,13 +38,12 @@
       </a>
       <a 
         role="button" 
+        target="_blank"
         rel="noopener noreferrer"
-        target=""
-        href="javascript:void(0)"
+        href="{{ live_preview }}"
         class="btn btn--primary-outline" 
       >
-        <!-- <span>Live Preview</span> -->
-        <span>TBD</span>
+        <span>Live Preview</span>
         <i class="fas fa-external-link-alt"></i>
       </a>
     </div>

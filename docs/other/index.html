@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--  -->
+<meta name="description" content="HTML structure with the general element tags" />
+<link rel="icon" type="image/png" href="https://icons.iconarchive.com/icons/thehoth/seo/256/seo-web-code-icon.png" />
+<title>HTML Basics</title>
+<!--  -->
+<link rel="stylesheet" href="./assets/reset.css" />
+<link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<br/>
+<hr/>
+<br/>
+
+<p class="para-class-dot">Lorem</p>
+<p id="para-id-pound">Lorem</p>
+
+<p>
+  This is paragraph text. Lorem ipsum dolor sit amet 
+  consectetur adipisicing elit.
+</p>
+
+<p>
+  Lorem <mark>ipsum</mark> dolor sit amet <strong>consectetur</strong> 
+  adipisicing elit. Aut <i>harum molestias</i> labore amet possimus 
+  <s>exercitationem aperiam</s> earum, doloribus <u>nobis ducimus</u> 
+  maiores <b>quia voluptates</b> quis omnis molestiae quisquam. 
+  <a href="#">Voluptatibus, officiis laudantium?</a>
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+  <code>Hic culpa, nobis doloremque</code> veniam non, nihil
+  cupiditate odit repellat est <kbd>ALT + F4</kbd> expedita 
+  facilis. Fuga aspernatur, alias debitis eveniet totam minima vel.
+</p>
+
+<ul>
+  <li>List it</li>
+  <li>Ship it</li>
+  <li>See it</li>
+  <li>Buy it</li>
+</ul>
+
+<ol>
+  <li>Step 1</li>
+  <li>Step 2</li>
+  <li>????</li>
+  <li>PROFIT!!!</li>
+</ol>
+
+<dl>
+  <dt>Web</dt>
+  <dd>The part of the Internet that contains websites and web pages</dd>
+  <dt>HTML</dt>
+  <dd>A markup language for creating web pages</dd>
+  <dt>CSS</dt>
+  <dd>A technology to make HTML look better</dd>
+</dl>
+
+<blockquote cite="https://en.wikiquote.org/wiki/Edward_Snowden">
+  If you think privacy is unimportant for you because you have 
+  nothing to hide, you might as well say free speech is 
+  unimportant for you because you have nothing useful to say.
+  <br/><br/>– Edward Snowden
+</blockquote>
+
+<pre>
+&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html&#x3E;
+  &#x3C;head&#x3E;
+    &#x3C;title&#x3E;Hello World&#x3C;/title&#x3E;
+  &#x3C;/head&#x3E;
+
+  &#x3C;body&#x3E;
+    &#x3C;p&#x3E;Lorem ipsum dolor sit amet.&#x3C;/p&#x3E;
+  &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
+</pre>
+
+<!--  -->
+<br/>
+<hr/>
+<br/>
+<!--  -->
+
+<table>
+  <caption>Ho-kago Tea Time</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Instrument</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yui Hirasawa</td>
+      <td>Lead Guitar</td>
+    </tr>
+    <tr>
+      <td>Mio Akiyama</td>
+      <td>Bass</td>
+    </tr>
+    <tr>
+      <td>Ritsu Tainaka</td>
+      <td>Drums</td>
+    </tr>
+    <tr>
+      <td>Tsumugi Kotobuki</td>
+      <td>Keyboard</td>
+    </tr>
+    <tr>
+      <td>Azusa Nakano</td>
+      <td>Rhythm Guitar</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Name</th>
+      <th>Instrument</th>
+    </tr>
+  </tfoot>
+</table>
+
+<!--  -->
+<br/>
+<hr/>
+<br/>
+<!--  -->
+
+<form>
+  <p><em>This is not a real form and does not submit or save any information.</em></p>
+  
+  <fieldset>
+    <legend>User</legend>
+
+    <label>
+      First name <br/>
+      <input type="text" id="first-name" value="one"/>
+    </label>
+
+    <br/>
+
+    <label>
+      Last name <br/>
+      <input type="text" id="last-name" value="two"/>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Gender</legend>
+    
+    <input type="radio" name="gender" id="gender-male" value="male"/>
+    <label for="gender-male">Male</label>
+    
+    <br/>
+    
+    <input type="radio" name="gender" id="gender-female" value="female"/>
+    <label for="gender-female">Female</label>
+    
+    <br/>
+    
+    <input type="radio" name="gender" id="gender-non-binary" value="non-binary"/>
+    <label for="gender-non-binary">Non-binary</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Information</legend>
+
+    <label>Email</label><br/>
+    <input type="email" id="email" required=""/>
+
+    <br/>
+
+    <label>Phone number</label><br/>
+    <input type="tel" id="phone"/>
+
+    <br/>
+
+    <label>Password</label><br/>
+    <input type="password" id="password"/>
+
+    <br/>
+
+    <label>Favorite Flavor</label><br/>
+    <select>
+      <option>Chocolate</option>
+      <option>Vanilla</option>
+      <option>Strawberry</option>
+      <option>Mint Chocolate Chip</option>
+      <option>Coffee</option>
+    </select>
+
+    <br/>
+
+    <label>Comments</label><br/>
+    <textarea></textarea>
+  </fieldset>
+
+  <div>
+    <label>
+      <input type="checkbox" value="terms"/>
+      I agree to the 
+      <a
+        title="Go to Google Search Page" 
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.google.com/"
+      >terms and conditions</a>
+    </label>
+  </div>
+
+  <div>
+    <button type="submit">Sign up</button>
+    <button type="reset">Reset form</button>
+    <button disabled="disabled">Disabled</button>
+  </div>
+</form>
+
+<!--  -->
+<br/>
+<hr/>
+<br/>
+<!--  -->
+
+<img src="" alt="Test-Image" name="pic"/>
+<!--  -->
+<script src="./app.js"></script>
+</body>
+</html>

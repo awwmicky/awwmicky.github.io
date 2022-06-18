@@ -3,9 +3,45 @@
     <h2 class="section-heading">Projects</h2>
 
     <div class="all-projects">
-      <include src="../partials/projects/p-1.html"></include>
-      <include src="../partials/projects/p-2.html"></include>
-      <include src="../partials/projects/p-3.html"></include>
+      <include src="../partials/projects/index.html">
+        {
+          "id"            : "p-1",
+          "order"         : "odd",
+          "title"         : "OKSH",
+          "caption"       : "Mock shell monospace font generator",
+          "description"   : "An OKPC (NFT) companion mock shell environment for real-time monospace unicode type. Anyone can save and add their text to clipboard on any device.",
+          "roles"         : "Front-End",
+          "tech"          : "React, Chakra UI, Styled Components, Framer Motion",
+          "source_code"   : "https://github.com/michaelbelong/oksh",
+          "live_preview"  : "https://oksh.app/"
+        }
+      </include>
+      <include src="../partials/projects/index.html">
+        {
+          "id"            : "p-2",
+          "order"         : "even",
+          "title"         : "Netflix Clone",
+          "caption"       : "Reproduction of an online streaming app",
+          "description"   : "The focus was on replicating and improving the UI code quality of the original site. After spotting patterns and inconsistencies, we started building a UI library.",
+          "roles"         : "Front-End, Tech Lead",
+          "tech"          : "React, Storybook, Firebase, Sass, Styled Components",
+          "source_code"   : "https://github.com/Arcane-404/netflix-clone",
+          "live_preview"  : "https://the-netflix-clone-app.netlify.app/" 
+        }
+      </include>
+      <include src="../partials/projects/index.html">
+        {
+          "id"           : "p-3",
+          "order"        : "odd",
+          "title"        : "MM Arch Design Studio",
+          "caption"      : "Portfolio highlighting architecture projects",
+          "description"  : "Design solutions making an impact for small renovation, multi-unit development, and more. This site will gain views and generate more leads.",
+          "roles"        : "Web Developer",
+          "tech"         : "HTML, CSS, JavaScript, jQuery",
+          "source_code"  : "https://github.com/Arcane-404/Architecture-Portfolio",
+          "live_preview" : "https://mm-archdesign.netlify.app/"
+        }
+      </include>
     </div>
   </div>
 </section>

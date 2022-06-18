@@ -1,0 +1,14 @@
+<div id="{{ id }}" class="t-item">
+  <div class="t-head">
+    <h3 class="t-title">{{ title }}</h3>
+    <h4 class="t-caption">{{ caption }}</h4>
+  </div>
+
+  <div class="t-body">
+    <each loop="item in {{ tech }}">
+      <a title="{{ item.title }}" class="t-icon" target="_blank" rel="noopener noreferrer" href="{{ item.link }}">
+        <icon src="../assets/tech/{{ id }}/{{ item.title.toLowerCase().replace(/[\s\.]/, '-') }}.svg"></icon>
+      </a>
+    </each>
+  </div>
+</div>

@@ -67,16 +67,24 @@
     margin-bottom: 1em;
   }
 
-  & .p-sub-title {
+  & .p-caption {
     font-size: 0.9rem;
     color: #0d081a;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   & .p-desc {
     font-size: 0.9rem;
     color: #48464b;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
+  }
+
+  & .p-accordion {
+    margin-bottom: 2em;
+
+    & .p-accordion-details {
+      margin-left: 1em;
+    }
   }
 
   & .p-tech, 
@@ -108,27 +116,29 @@
     & .p-options {
       flex-flow: row;
     }
+
+    & .p-accordion-details > dt {
+      display: inline-block;
+    }
+    & .p-accordion-details > dd {
+      display: inline;
+    }
   }
 }
 
 @include breakpoint (tablet_2) {
-  .p-odd {
-    flex-flow: row;
-    & .p-content {
-      margin-left: -150px;
-    }
-  }
-
-  .p-even {
-    flex-flow: row-reverse;
-    & .p-content {
-      margin-right: -150px;
-    }
-  }
-
   .p-item {
-    // flex-flow: row;
     margin: 0 auto;
+
+    &.odd {
+      flex-flow: row;
+      & .p-content { margin-left: -150px; }
+    }
+  
+    &.even {
+      flex-flow: row-reverse;
+      & .p-content { margin-right: -150px; }
+    }
   }
 
   .p-content {
@@ -140,7 +150,7 @@
       font-size: 1.6rem;
     }
 
-    & .p-sub-title {
+    & .p-caption {
       font-size: 1rem;
     }
 

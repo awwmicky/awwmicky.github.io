@@ -72,20 +72,21 @@
   gtag('config', 'UA-179518512-2');
 </script>
 
-<!-- Google Tag Manager -->
-<!--  
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KDS989P');</script>
--->
-
-<!-- Google Tag Manager (noscript) -->
-<!--  
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDS989P"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
--->
+<!-- PWA - Service Worker -->
+<!-- <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      const serviceWorker = './sw.js';
+      navigator.serviceWorker.register(serviceWorker)
+      .then(function (registration) {
+        console.info('[SW] service Worker is registered ::', registration.scope)
+      })
+      .catch(function (error) {
+        console.warn('[SW] service Worker registration failed ::', error.message)
+      })
+    });
+  }
+</script> -->
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
