@@ -1,0 +1,61 @@
+@use '../abstracts/' as *;
+
+$toggle-width: 50px;
+$toggle-height: 25px;
+$toggle-shape: 6px;
+$toggle-gutter: 4px;
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+$toggle-slide: $toggle-width - $toggle-control-size - $toggle-gutter;
+
+.toggle-control {
+  margin-block: 1em;
+
+  & #checkbox {
+    display: none;
+    appearance: none;
+  }
+
+  & #toggle {
+    @include box ($toggle-width, $toggle-height);
+    background-color: #CCC;
+    display: block;
+    border-radius: $toggle-shape;
+    transition: map-get($motion, normal);
+    transition-property: background;
+    box-shadow: inset 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
+    @include both-elements () {
+      color: #BCB4B4;
+      top: calc($toggle-gutter / 2.5);
+    }
+
+    &::before {
+      content: 'copy';
+      right: 115%;
+    }
+    &::after {
+      content: 'direct';
+      left: 115%;
+    }
+  }
+
+  & #controller {
+    @include box ($toggle-control-size);
+    background-color: #FFF;
+    border-radius: $toggle-shape - 2;
+    position: absolute;
+    top: $toggle-gutter;
+    transition: map-get($motion, normal);
+    transition-property: left;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  & #checkbox:not(:checked) + #toggle>#controller {
+    left: $toggle-gutter;
+  }
+
+  & #checkbox:checked + #toggle>#controller {
+    left: $toggle-slide;
+  }
+}

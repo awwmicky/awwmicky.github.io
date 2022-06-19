@@ -1,6 +1,36 @@
 # Snippets
 
 ```html
+    <ul class="timeline" role="list">
+      <li class="timestamp">
+        <time>2018</time>
+        <p>Started my web dev journey</p>
+      </li>
+      <li class="timestamp">
+        <time>2019</time>
+        <p>Enrolled in a Full Stack Web Development bootcamp</p>
+      </li>
+      <li class="timestamp">
+        <time>2020</time>
+        <p>TA'ed as a UX/UI Designer & Developer</p>
+      </li>
+      <li class="timestamp">
+        <time>2021</time>
+        <p>Enrolled in a Data Structure & Algorithm intensive program</p>
+      </li>
+    </ul>
+
+    <dl class="info__skills">
+      <dt>What I am currently learning:</dt>
+      <dd>Atomic Design, Design Architecture, Design System, Web 3.0</dd>
+      <dt>What I am curious about:</dt>
+      <dd>JAM Stack, Next.js, Redux, TypeScript, GraphQL, Tailwind</dd>
+      <dt>What has my attention:</dt>
+      <dd>Framer Motion, Three.js, GSAP, SVG animation</dd>
+    </dl>
+```
+
+```html
 <!-- Tech 1 -->
 
 <a title="Bootstrap" class="t-icon" target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/">

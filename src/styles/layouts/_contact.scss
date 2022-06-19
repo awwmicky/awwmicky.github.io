@@ -10,6 +10,9 @@
   text-align: center;
   background-color: #efebfa;
   box-shadow: 0px 0px 20px #00000028;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 
   & .b-intro {
     font-size: 0.9rem;
@@ -19,21 +22,14 @@
     font-size: 1.4rem;
     line-height: 1.5;
   }
-
-  & .b-tooltip {
-    color: #BCB4B4;
-  }
-
-  & .b-options {
-    margin-top: 1.4em;
-    display: flex;
-    flex-flow: column;
-    gap: 1em;
-    max-width: 90vw;
-  }
 }
 
-
+.contact-options {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  flex-flow: column;
+}
 
 @include breakpoint (tablet_1) {
   .banner {
@@ -44,13 +40,10 @@
     & .b-heading {
       font-size: 1.85rem;
     }
+  }
 
-    & .b-options {
-      flex-flow: row;
-      place-content: center;
-    }
+  .contact-options {
+    flex-flow: row;
+    place-content: center;
   }
 }
-
-// btn w: 195px -> 235px
-// btn h: 53px -> 63px

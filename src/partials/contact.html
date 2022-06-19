@@ -3,10 +3,17 @@
     <div class="banner">
       <h3 class="b-intro">Have a project in mind</h3>
       <h2 class="b-heading">Let's get in touch</h2>
-      <p class="b-tooltip">(click to copy link)</p>
       
-      <div class="b-options">
+      <div class="toggle-control">
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox" id="toggle">
+          <span id="controller"></span>
+        </label>
+      </div>
+
+      <div class="contact-options">
         <button 
+          id="email"
           class="copy-btn email-link" 
           value="m-f-alvarez@outlook.com"
         >
@@ -15,6 +22,7 @@
         </button>
 
         <button 
+          id="phone"
           class="copy-btn phone-link"
           value="6502608682"
         >

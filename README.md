@@ -41,8 +41,6 @@
       href="https://rebrand.ly/michael-f-alvarez__phone"
     >650-260-8682
     </a></td>
-    <!-- https://aww-micky.web.app/phone.html -->
-    <!-- https://rebrand.ly/michael-f-alvarez__phone -->
   </tr>
   <tr>
     <td>Resume</td>
@@ -51,8 +49,15 @@
       href="https://rebrand.ly/michael-f-alvarez__resume"
     >michael-f-alvarez__resume.pdf
     </a></td>
-    <!-- https://aww-micky.web.app/up_/docs/michael-f-alvarez__resume.pdf -->
-    <!-- https://rebrand.ly/michael-f-alvarez__resume -->
+  </tr>
+  <tr>
+    <td>Calendly</td>
+    <td><a 
+      target="_blank" 
+      rel="noopener noreferrer"
+      href="https://calendly.com/michael-f-alvarez/meetup"
+    >Meetup
+    </a></td>
   </tr>
   <tr>
     <td>Social</td>
@@ -62,8 +67,6 @@
       href="https://rebrand.ly/michael-f-alvarez__social"
     >@awwmicky
     </a></td>
-    <!-- https://www.google.com/search?q=@awwmicky -->
-    <!-- https://rebrand.ly/michael-f-alvarez__social -->
   </tr>
   <tr>
     <td>Location</td>
@@ -76,5 +79,3 @@
   </tr>
 </tbody>
 </table>
-
-  <!-- "plugins": [ "postcss-preset-env" ] -->

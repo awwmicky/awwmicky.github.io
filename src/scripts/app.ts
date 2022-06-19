@@ -1,17 +1,20 @@
 import { 
   $workBtn,
-  $resumeBtn1,
-  $resumeBtn2,
+  $resumeBtn,
+  $appointmentBtn,
   $contactBtn,
   $emailLink, 
-  $phoneLink 
-} from './constants/'
-import { copyToClipboard, viewItem } from './events/'
+  $phoneLink,
+} from './constants'
+import { 
+  viewItem, 
+  contactOutput, 
+} from './events'
 
 $workBtn.addEventListener('click', viewItem)
-$resumeBtn1.addEventListener('click', viewItem)
-$resumeBtn2.addEventListener('click', viewItem)
+$resumeBtn.addEventListener('click', viewItem)
+$appointmentBtn.addEventListener('click', viewItem)
 $contactBtn.addEventListener('click', viewItem)
 
-$emailLink.addEventListener('click', copyToClipboard)
-$phoneLink.addEventListener('click', copyToClipboard)
+$emailLink.addEventListener('click', contactOutput)
+$phoneLink.addEventListener('click', contactOutput)

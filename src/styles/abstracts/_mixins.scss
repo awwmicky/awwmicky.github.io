@@ -18,12 +18,36 @@
   $content: '', $element: 'before', $position: absolute,
   $top: 0, $right: 0, $bottom: 0, $left: 0
 ) {
-
   position: relative;
   
   &::#{ $element } {
     content: "#{ $content }";
     position: $position;
+    @content;
+  }
+}
+
+@mixin insert-element (
+  $top: 0, $right: 0, $bottom: 0, $left: 0,
+  $content: '', $element: 'before'
+) {
+  position: relative;
+  
+  &::#{ $element } {
+    content: "#{ $content }";
+    position: absolute;
+    @content;
+  }
+}
+
+@mixin both-elements () {
+  position: relative;
+  
+  &::before,
+  &::after {
+    content: '';
+    // display: inline-block;
+    position: absolute;
     @content;
   }
 }
