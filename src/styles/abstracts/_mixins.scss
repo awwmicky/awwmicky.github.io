@@ -5,7 +5,7 @@
   height: $height;
 }
 
-/* Media Query */
+/* === Media Query === */
 @mixin breakpoint ($key, $pre: min) {
   $size: map-get($breakpoints, $key);
   @if $pre == max { $size: $size - 1px; }
@@ -13,21 +13,9 @@
   @media only screen and (#{$pre}-width: $size) { @content; }
 }
 
-/* Psuedo-Element */
-@mixin psuedo-element (
-  $content: '', $element: 'before', $position: absolute,
-  $top: 0, $right: 0, $bottom: 0, $left: 0
-) {
-  position: relative;
-  
-  &::#{ $element } {
-    content: "#{ $content }";
-    position: $position;
-    @content;
-  }
-}
+/* === Psuedo-Element === */
 
-@mixin insert-element (
+@mixin single-element (
   $top: 0, $right: 0, $bottom: 0, $left: 0,
   $content: '', $element: 'before'
 ) {
@@ -52,31 +40,8 @@
   }
 }
 
-@mixin position ($position, $args) {
-  
-  position: $position;
-  
-  @each $order in (top right bottom left) {
-    $i: index($args, $order);
+/* === Text Content === */
 
-    @if $i and $i + 1 <= length($args) 
-    and type-of(nth($args, $i + 1)) == number 
-    { #{$order}: nth($args, $i + 1); }
-  }
-}
-
-/*  */
-
-@mixin center ($orientation: false, $direction: column) {
-  display: flex;
-  flex-flow: $direction;
-
-  @if $orientation == vertical { align-items: center; }
-  @else if $orientation == horizontal { justify-content: center; }
-  @else { align-items: center; justify-content: center; }
-}
-
-/* Text Content */
 @mixin text-styling (
   $color: false, $family: false, $size: false, 
   $weight: false, $leading: false, $tracking: false,
@@ -113,6 +78,30 @@
   @if $white-space { white-space: $white-space; }
 }
 
+/* === Alignment === */
+
+@mixin center ($orientation: false, $direction: column) {
+  display: flex;
+  flex-flow: $direction;
+
+  @if $orientation == vertical { align-items: center; }
+  @else if $orientation == horizontal { justify-content: center; }
+  @else { align-items: center; justify-content: center; }
+}
+
+@mixin position ($position, $args) {
+  
+  position: $position;
+  
+  @each $order in (top right bottom left) {
+    $i: index($args, $order);
+
+    @if $i and $i + 1 <= length($args) 
+    and type-of(nth($args, $i + 1)) == number 
+    { #{$order}: nth($args, $i + 1); }
+  }
+}
+
 @mixin spacing ($gap, $position) {
 
   @if map-has-key($spacing, $gap) {
@@ -147,8 +136,9 @@
   @if $position == left { border-radius: $size 0 0 $size; }
 }
 
-@mixin gradient ($start-color, $end-color, $orientation: false) {
-
+@mixin gradient (
+  $start-color, $end-color, $orientation: false
+) {
   background: $start-color;
   
   @if $orientation == 'vertical' {
@@ -163,7 +153,7 @@
 }
 
 
-/*  */
+/* ===  === */
 
 @mixin aspect-ratio ($x, $y) {
   
@@ -243,7 +233,7 @@
 // @mixin scrollbar {}
 // @mixin selection {}
 
-/*  */
+/* ===  === */
 
 @mixin placeholder (
   $width, $height, $name: false , $color: darkgray
@@ -257,9 +247,7 @@
     $name: "#{ $width } x #{ $height }"; 
   }
 
-  @include psuedo-element ($content: $name) {
-    top: 50%;
-    left: 50%;
+  @include single-element ($top: 50%, $left: 50%, $content: $name) {
     // inset: 50% 0 0 50%;
     transform: translate(-50%, -50%);
   }

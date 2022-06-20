@@ -44,15 +44,15 @@ header > div {
     display: flex;
     place-items: center;
 
-    @include psuedo-element () {
-      content: "";
+    @include single-element ($left: 0, $bottom: 0, $right: 0) {
+      // content: "";
       transition: transform 0.3s ease-in-out;
       background-color: #5924ed;
       transform: scaleX(0);
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      // position: absolute;
+      // left: 0;
+      // right: 0;
+      // bottom: 0;
       // bottom: -25%;
       display: inline-block;
       height: 0.25rem;

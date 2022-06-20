@@ -37,12 +37,12 @@
   z-index: 1;
   transition: 0.3s ease transform;
 
-  @include psuedo-element () {
+  @include single-element ($top: 0, $left: 0) {
     background-color: #5a24ed38;
     height: 100%;
     width: 100%;
-    left: 0;
-    top: 0;
+    // left: 0;
+    // top: 0;
     z-index: 1;
   }
 

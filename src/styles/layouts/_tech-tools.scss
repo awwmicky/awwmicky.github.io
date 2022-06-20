@@ -1,13 +1,5 @@
 @use '../abstracts/' as *;
 
-#technologies {
-  padding: 10rem 0;
-}
-
-#technologies .section-heading {
-  margin-bottom: 5rem;
-}
-
 .all-tech {
   display: grid;
   gap: 2em;

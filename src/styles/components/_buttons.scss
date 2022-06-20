@@ -54,7 +54,7 @@
 	place-items: center;
 	place-content: center;
 
-	@include insert-element ($top: 0, $left: 0) {
+	@include single-element ($top: 0, $left: 0) {
 		@include box (100%);
 		border-radius: 2ch;
 		transition: all 0.5s ease;

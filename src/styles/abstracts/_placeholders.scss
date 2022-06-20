@@ -30,7 +30,7 @@
   transition-property: transform;
   box-shadow: map-get($shadow, before);
 
-  @include psuedo-element () {
+  @include single-element () {
     transition: map-get($motion, medium);
     transition-property: transform;
     box-shadow: map-get($shadow, after);
