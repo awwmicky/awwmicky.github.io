@@ -60,8 +60,8 @@
   box-shadow: 0px 0px 20px #4705fc33;
   border-radius: 12px;
 
-  // & .hero-image {
-  & img {
+  & .hero-image,
+  & .hero-image>* {
     // @extend %img;
     width: 100%;
     max-height: 250px;
@@ -137,7 +137,8 @@
     flex: 1.25;
     // max-width: 400px;
     
-    & .hero-image {
+    & .hero-image, 
+    & .hero-image>* {
       height: 100%;
       max-height: initial;
     }
@@ -150,7 +151,8 @@
   }
 
   .hero-profile {
-    & .hero-image {
+    & .hero-image, 
+    & .hero-image>* {
       height: 600px;
     }
   }

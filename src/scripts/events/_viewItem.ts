@@ -1,6 +1,6 @@
 import { redirect } from '../utilities'
 
-const viewItem = (e: MouseEvent) => {
+const viewItem = (e: MouseEvent): void => {
   e.preventDefault()
   const btn = e.target as HTMLButtonElement
   const linkToResume: string = 'https://rebrand.ly/michael-f-alvarez__resume'

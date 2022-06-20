@@ -1,5 +1,16 @@
-export const $ = <E extends Element = Element> (elm: string): E => document.querySelector(elm)!
-export const $$ = <E extends Element = Element> (elm: string): NodeListOf<E> => document.querySelectorAll(elm)
+export const $ = <
+  E extends Element = HTMLElement
+> (
+  selector: string, 
+  scope: Element | Document = document
+): E => scope.querySelector(selector)!
+
+export const $$ = <
+  E extends HTMLElement = HTMLElement
+> (
+  selector: string,
+  scope: Element | Document = document
+): NodeListOf<E> => scope.querySelectorAll(selector)
 
 // const list = document.querySelectorAll('.navbar li')
 // const listLI = $$<HTMLLIElement>('.navbar li')

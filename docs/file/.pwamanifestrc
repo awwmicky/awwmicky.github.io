@@ -1,0 +1,15 @@
+{
+  "name": "my-awesome-pwa",
+  "description": "An awesome PWA to do awesome things",
+  "pwaManifest": {
+    "name": "My Awesome PWA",
+    "shortName": "My PWA",
+    "startURL": "./offline",
+    "theme": "#add8e6",
+    "generateIconOptions": {
+      "baseIcon": "./public/my-awesome-icon.svg",
+      "sizes": [96, 152, 192, 384, 512],
+      "genFavicons": true
+    }
+  }
+}

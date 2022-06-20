@@ -5,6 +5,11 @@
     },
     "posthtml-inline-svg": {
       "cwd": "./src/pages/"
+    },
+    "posthtml-expressions": {
+      "locals": {
+        "testing": false
+      }
     }
   }
 }

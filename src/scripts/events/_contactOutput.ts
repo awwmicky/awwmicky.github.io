@@ -1,4 +1,4 @@
-import { print, redirect, delay } from '../utilities'
+import { $, redirect, delay } from '../utilities'
 import { $toggleControl } from '../constants'
 
 interface CopyEvent {
@@ -30,8 +30,10 @@ const redirectToApp = (id: string, value: string): void => {
 
 const contactOutput = (e: MouseEvent): void => {
   const isChecked = $toggleControl.checked
+  // const { id, value } = e.target
   const ctaBtn = e.target as HTMLButtonElement
-  const label = ctaBtn.querySelector('span') as HTMLSpanElement
+  const label = $<HTMLSpanElement>('span', ctaBtn)
+  // ctaBtn.querySelector('span') as HTMLSpanElement
   const originalText = label.textContent
 
   const resetChange = () => {

@@ -1,6 +1,6 @@
 # HTML + CSS Tools
 
-## HTML Tags
+## HTML Elements
 ```css
 q, b, s, i, u {}
 ol, ul, li {}

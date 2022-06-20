@@ -13,16 +13,13 @@ bg hsl(232.7, 27.3%, 23.7%)
 { box-sizing: inherit; }
 
 html {
-  width: 100%;
   height: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body, #root {
-  // background: hsl(0, 0%, 93%);
   background: #efebfa;
-  // height: 100%;
   min-height: 100%;
   // min-height: 100vh;
 }

@@ -1,11 +1,16 @@
-<img 
-  class="card__img" 
-  src="../images/profile/avatar.jpg" 
-  alt="about-profile-avatar"
-/>
+<if condition="testing">
+  <img 
+    class="card__img" 
+    src="../images/profile/avatar.jpg" 
+    alt="about-profile-avatar"
+  />
+</if>
 
-<!-- <picture>
-  <source srcset="../images/profile/avatar.jpg?as=avif" type="image/avif" />
-  <source srcset="../images/profile/avatar.jpg?as=webp" type="image/webp" />
-  <img src="../images/profile/avatar.jpg" alt="about-profile-avatar" />
-</picture> -->
+<else>
+  <picture class="card__img">
+    <source srcset="../images/profile/avatar.jpg?as=avif" type="image/avif" />
+    <source srcset="../images/profile/avatar.jpg?as=webp" type="image/webp" />
+    <source srcset="../images/profile/avatar.jpg" type="image/jpeg" />
+    <img src="../images/profile/avatar.jpg" alt="about-profile-avatar" />
+  </picture>
+</else>
