@@ -30,3 +30,7 @@
 ## webmanifest notes
 
 - https://web.dev/add-manifest/
+
+## page speed insight
+
+- https://pagespeed.web.dev/

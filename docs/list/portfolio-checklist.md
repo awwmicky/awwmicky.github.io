@@ -36,8 +36,3 @@
 
 - [ ] lazy loading
   - slide in images
-
-## Issue/Bug
-
-- meta thumbnail
-  - fit layout for linkedin

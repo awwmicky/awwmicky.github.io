@@ -14,6 +14,7 @@
   - 5mb -
   - jpg, png, webp, gif
 - resize thumbnail
+  - ideal :: 600x300 | 1200x630
 
 ---
 

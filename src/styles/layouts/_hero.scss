@@ -125,7 +125,7 @@
 
     & .hero-desc {
       font-size: 1.25rem;
-      max-width: 50.5ch;
+      max-width: 48ch;
     }
     
     & .hero-options {
@@ -135,7 +135,6 @@
 
   .hero-profile {
     flex: 1.25;
-    // max-width: 400px;
     
     & .hero-image, 
     & .hero-image>* {

@@ -1,7 +1,0 @@
-- email
-- phone
-- resume
-- ext link
-- github
-- github alt
-- linkedin

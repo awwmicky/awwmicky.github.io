@@ -7,7 +7,7 @@
     "startURL": "./offline",
     "theme": "#add8e6",
     "generateIconOptions": {
-      "baseIcon": "./public/my-awesome-icon.svg",
+      "baseIcon": "./public/favicon.svg",
       "sizes": [96, 152, 192, 384, 512],
       "genFavicons": true
     }
