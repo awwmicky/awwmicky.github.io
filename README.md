@@ -46,8 +46,9 @@
     <td>Resume</td>
     <td><a 
       target="_blank"
+      rel="noopener noreferrer"
       href="https://rebrand.ly/michael-f-alvarez__resume"
-    >michael-f-alvarez__resume.pdf
+    >view resume
     </a></td>
   </tr>
   <tr>
@@ -56,7 +57,7 @@
       target="_blank" 
       rel="noopener noreferrer"
       href="https://calendly.com/michael-f-alvarez/meetup"
-    >Meetup
+    >set appointment
     </a></td>
   </tr>
   <tr>
@@ -73,8 +74,8 @@
     <td><a 
       target="_blank" 
       rel="noopener noreferrer"
-      href="https://www.google.com/maps/place/San+Mateo,+CA"
-    >San Mateo, CA
+      href="https://www.google.com/maps/place/Bay+Area,+CA"
+    >Bay Area, CA
     </a></td>
   </tr>
 </tbody>

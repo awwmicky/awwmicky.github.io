@@ -9,33 +9,38 @@
 @mixin breakpoint ($key, $pre: min) {
   $size: map-get($breakpoints, $key);
   @if $pre == max { $size: $size - 1px; }
-  // @media only screen and (min-width: $size) { @content; }
   @media only screen and (#{$pre}-width: $size) { @content; }
 }
 
 /* === Psuedo-Element === */
 
 @mixin single-element (
-  $top: 0, $right: 0, $bottom: 0, $left: 0,
-  $content: '', $element: 'before'
+  $inset: false, $element: 'before', $content: ''
 ) {
   position: relative;
   
   &::#{ $element } {
     content: "#{ $content }";
     position: absolute;
+    @if $inset {
+      inset: #{ $inset };
+    }
     @content;
   }
 }
 
-@mixin both-elements () {
+@mixin both-elements (
+  $inset: false, $content: ''
+) {
   position: relative;
   
   &::before,
   &::after {
-    content: '';
-    // display: inline-block;
+    content: "#{ $content }";
     position: absolute;
+    @if $inset {
+      inset: #{ $inset };
+    }
     @content;
   }
 }
@@ -169,10 +174,6 @@
   & > .aspect-ratio  {
     position: absolute;
     inset: 0 0 0 0;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
   }
 }
 
@@ -247,8 +248,7 @@
     $name: "#{ $width } x #{ $height }"; 
   }
 
-  @include single-element ($top: 50%, $left: 50%, $content: $name) {
-    // inset: 50% 0 0 50%;
+  @include single-element (50% auto auto 50%, $content: $name) {
     transform: translate(-50%, -50%);
   }
 }

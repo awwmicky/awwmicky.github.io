@@ -1,26 +1,25 @@
+import { RESUME, APPOINTMENT } from '../constants'
 import { redirect } from '../utilities'
 
 const viewItem = (e: MouseEvent): void => {
-  e.preventDefault()
   const btn = e.target as HTMLButtonElement
-  const linkToResume: string = 'https://rebrand.ly/michael-f-alvarez__resume'
-  const linkToAppointment: string = 'https://calendly.com/michael-f-alvarez/meetup'
-  const linkToEmail: string = 'm-f-alvarez@outlook.com'
   
-  switch (btn.id) {
-    case 'view-work':
+  switch (btn.dataset.id) {
+    case 'projects':
       window.location.href = '/#projects'
     break;
-    case 'view-resume':
-      redirect(linkToResume, '_blank')
+    case 'contact':
+      window.location.href = '/#contact'
     break;
-    case 'view-appointment':
-      redirect(linkToAppointment, '_blank')
+    case 'resume':
+      redirect(RESUME, '_blank')
     break;
-    case 'view-contact':
-      redirect(`mailto:${linkToEmail}`)
+    case 'appointment':
+      redirect(APPOINTMENT, '_blank')
     break;
-    default: break;
+    default: 
+      console.warn(`${ btn.dataset.id } - not an option`)
+    break;
   }
 }
 

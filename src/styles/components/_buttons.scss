@@ -54,7 +54,7 @@
 	place-items: center;
 	place-content: center;
 
-	@include single-element ($top: 0, $left: 0) {
+	@include single-element (0 auto auto 0) {
 		@include box (100%);
 		border-radius: 2ch;
 		transition: all 0.5s ease;
@@ -107,8 +107,9 @@ $btn-after: calc(0.1rem + 0.2rem);
 
 	& i {
 		position: absolute;
-		top: 0;
-		left: 0;
+		inset: 0 auto auto 0;
+		// top: 0;
+		// left: 0;
 		border-radius: 0.5rem 0 0 0.5rem;
 		background: #000;
 		color: #FFF;

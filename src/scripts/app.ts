@@ -1,8 +1,8 @@
 import { 
   $workBtn,
   $resumeBtn,
-  $appointmentBtn,
   $contactBtn,
+  $appointmentBtn,
   $emailLink, 
   $phoneLink,
 } from './constants'
@@ -13,8 +13,8 @@ import {
 
 $workBtn.addEventListener('click', viewItem)
 $resumeBtn.addEventListener('click', viewItem)
-$appointmentBtn.addEventListener('click', viewItem)
 $contactBtn.addEventListener('click', viewItem)
+$appointmentBtn.addEventListener('click', viewItem)
 
 $emailLink.addEventListener('click', contactOutput)
 $phoneLink.addEventListener('click', contactOutput)

@@ -1,40 +1,37 @@
+import { $toggleControl, EMAIL, PHONE } from '../constants'
 import { $, redirect, delay } from '../utilities'
-import { $toggleControl } from '../constants'
 
-interface CopyEvent {
-  preventDefault: () => void
-  clipboardData: any
-  // DataTransfer | ClipboardEvent | Navigator
-}
+type ContactInfo = {
+  value: string
+  protocol: string
+} | void
 
 const DISABLED: string = 'disabled'
 const SUCCESS: string = 'success'
 
 
-const copyToClipboard = (value: string): void => {
-  const copyHandler = (ev: CopyEvent) => {
-    ev.preventDefault()
-    ev.clipboardData.setData('text/plain', value)
-    document.removeEventListener('copy', copyHandler)
-  }
-
-  document.addEventListener('copy', copyHandler)
-  document.execCommand('copy')
+const getContactInfo = (id?: string): ContactInfo => {
+  if (id === 'email') return { value: EMAIL, protocol: 'mailto' }
+  else if (id === 'phone') return { value: PHONE, protocol: 'tel' }
+  else console.warn(`${ id } - not an option`)
 }
 
-const redirectToApp = (id: string, value: string): void => {
-  const protocol = (id === 'email') ? 'mailto' : 'tel'
-  redirect(`${ protocol }:${ value }`)
+const copyToClipboard = (value: string | undefined): void => {
+  navigator.clipboard.writeText(value || '')
+}
+
+const redirectToApp = (info: ContactInfo): void => {
+  redirect(`${ info?.protocol }:${ info?.value }`)
 }
 
 
 const contactOutput = (e: MouseEvent): void => {
-  const isChecked = $toggleControl.checked
-  // const { id, value } = e.target
   const ctaBtn = e.target as HTMLButtonElement
   const label = $<HTMLSpanElement>('span', ctaBtn)
-  // ctaBtn.querySelector('span') as HTMLSpanElement
+
   const originalText = label.textContent
+  const isChecked = $toggleControl.checked
+  const contactInfo = getContactInfo(ctaBtn.dataset.id)
 
   const resetChange = () => {
     label.textContent = originalText
@@ -52,10 +49,10 @@ const contactOutput = (e: MouseEvent): void => {
   if (ctaBtn.getAttribute(DISABLED)) return
   if (!isChecked) {
     makeChange('Copied!')
-    copyToClipboard(ctaBtn.value)
+    copyToClipboard(contactInfo?.value)
   } else {
     makeChange('Redirecting.')
-    redirectToApp(ctaBtn.id, ctaBtn.value)
+    redirectToApp(contactInfo)
   }
 }
 
