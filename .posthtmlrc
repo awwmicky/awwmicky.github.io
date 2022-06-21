@@ -8,7 +8,20 @@
     },
     "posthtml-expressions": {
       "locals": {
-        "testing": false
+        "testing": false,
+        "social_link": {
+          "linkedin": "https://linkedin.com/in/awwmicky",
+          "twitter": "https://twitter.com/awwmicky",
+          "github": "https://github.com/awwmicky"
+        },
+        "contact_info": {
+          "email": "m-f-alvarez@outlook.com",
+          "phone": "650-260-8682",
+          "resume": "https://rebrand.ly/michael-f-alvarez__resume",
+          "calendly": "https://calendly.com/michael-f-alvarez/meetup",
+          "social": "https://rebrand.ly/michael-f-alvarez__social",
+          "location": "https://www.google.com/maps/place/Bay+Area,+CA"
+        }
       }
     }
   }

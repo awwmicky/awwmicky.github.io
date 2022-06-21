@@ -26,20 +26,20 @@
         <ul class="l-list" role="list">
           <li><a 
             target="_blank"
-            rel="noopener noreferrer"
-            href="https://linkedin.com/in/awwmicky"
+            rel="noopener noreferrer" 
+            href="{{ social_link.linkedin }}"
           >LinkedIn
           </a></li>
           <li><a 
             target="_blank"
             rel="noopener noreferrer"
-            href="https://twitter.com/awwmicky"
+            href="{{ social_link.twitter }}"
           >Twitter
           </a></li>
           <li><a 
             target="_blank"
             rel="noopener noreferrer"
-            href="https://github.com/awwmicky"
+            href="{{ social_link.github }}"
           >GitHub
           </a></li>
         </ul>
@@ -50,36 +50,36 @@
         <ul class="l-list" role="list">
           <li><a 
             target="_self"
-            href="mailto:m-f-alvarez@outlook.com"
-          >m-f-alvarez@outlook.com
+            href="mailto:{{ contact_info.email }}"
+          >{{ contact_info.email }}
           </a></li>
           <li><a 
             target="_self"
-            href="tel:6502608682"
-          >650-260-8682
+            href="tel:{{ contact_info.phone }}"
+          >{{ contact_info.phone }}
           </a></li>
           <li><a 
             target="_blank"
             rel="noopener noreferrer"
-            href="https://rebrand.ly/michael-f-alvarez__resume"
+            href="{{ contact_info.resume }}"
           >view resume
           </a></li>
           <li><a 
             target="_blank"
             rel="noopener noreferrer"
-            href="https://calendly.com/michael-f-alvarez/meetup"
+            href="{{ contact_info.calendly }}"
           >set appointment
           </a></li>
           <li><a 
             target="_blank" 
             rel="noopener noreferrer"
-            href="https://rebrand.ly/michael-f-alvarez__social"
+            href="{{ contact_info.social }}"
           >@awwmicky
           </a></li>
           <li><a 
             target="_blank" 
             rel="noopener noreferrer"
-            href="https://www.google.com/maps/place/Bay+Area,+CA"
+            href="{{ contact_info.location }}"
           >Bay Area, CA
           </a></li>
         </ul>

@@ -8,7 +8,7 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 $toggle-slide: $toggle-width - $toggle-control-size - $toggle-gutter;
 
 .toggle-control {
-  margin-block: 1em;
+  margin-block: 1em 1.5em;
 
   & #checkbox {
     display: none;
