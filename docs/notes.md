@@ -4,6 +4,7 @@
 
 - learn cache strategy
 - apply PWA, image optimization, & webmanifest
+- https://parceljs.org/blog/
 
 ---
 
