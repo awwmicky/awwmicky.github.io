@@ -1,0 +1,44 @@
+<if condition="false">
+  <img 
+    class="{{ class }}" 
+    src="{{ img }}" 
+    alt="{{ alt }}"
+  />
+</if>
+
+<else>
+  <picture>
+    <source 
+      type="image/avif" 
+      media="(min-width: 600px)"
+      srcset="
+        {{ img }}?as=avif&width=375 375w,
+        {{ img }}?as=avif&width=768 768w,
+        {{ img }}?as=avif&width=1024 1024w
+      " 
+    />
+    <source 
+      type="image/webp" 
+      media="(min-width: 600px)"
+      srcset="
+        {{ img }}?as=webp&width=375 375w,
+        {{ img }}?as=webp&width=768 768w,
+        {{ img }}?as=webp&width=1024 1024w
+      " 
+    />
+    <source 
+      type="image/jpeg" 
+      media="(min-width: 600px)"
+      srcset="
+        {{ img }}?as=jpg&width=375 375w,
+        {{ img }}?as=jpg&width=768 768w,
+        {{ img }}?as=jpg&width=1024 1024w
+      " 
+    />
+    <img 
+      class="{{ class }}" 
+      src="{{ img }}?as=jpg&width=375" 
+      alt="{{ alt }}" 
+    />
+  </picture>
+</else>

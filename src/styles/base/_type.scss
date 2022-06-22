@@ -29,13 +29,13 @@ body {
 .txt-cap { font-size: var(--fs-body-caption); }
 .txt-sm { font-size: var(--fs-body-small); }
 
-// h1, h2, h3 {
-//   @include text-styling (
-//     hsl(0, 0%, 20%),
-//     // #fff,
-//     map-get($family, heading),
-//     var(--fs-heading-1),
-//     map-get($weight, bold),
-//     map-get($leading, normal)
-//   );
-// }
+h1, h2, h3 {
+  @include text-styling (
+    hsl(0, 0%, 20%),
+    // #fff,
+    map-get($family, heading),
+    var(--fs-heading-1),
+    map-get($weight, bold),
+    map-get($leading, normal)
+  );
+}

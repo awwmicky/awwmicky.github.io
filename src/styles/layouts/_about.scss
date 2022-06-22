@@ -21,8 +21,7 @@
   margin: 1rem;
   box-shadow: 0px 0px 20px #4705fc33;
   
-  &__img,
-  &__img>* {
+  &__img {
     @extend %img;
     @include box (70px);
     margin: 0 auto;

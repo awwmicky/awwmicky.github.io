@@ -4,7 +4,13 @@
 
     <div class="all-about">
       <div class="left card">
-        <include src="../partials/profile/avatar.html"></include>
+        <include src="../partials/blocks/image.html">
+          {
+            "class" : "card__img",
+            "img"   : "../images/profile/avatar.jpg",
+            "alt"   : "about-profile-avatar"
+          }
+        </include>
 
         <p class="card__desc">
           When I started my journey into web development, 

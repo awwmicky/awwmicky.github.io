@@ -26,7 +26,13 @@
     </div>
 
     <div class="hero-profile">
-      <include src="../partials/profile/picture.html"></include>
+      <include src="../partials/blocks/image.html">
+        {
+          "class" : "hero-image",
+          "img"   : "../images/profile/picture.jpg",
+          "alt"   : "my-profile-picture"
+        }
+      </include>
     </div>
   </div>
 </main>

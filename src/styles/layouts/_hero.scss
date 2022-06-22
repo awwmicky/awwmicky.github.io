@@ -136,8 +136,9 @@
   .hero-profile {
     flex: 1.25;
     
-    & .hero-image, 
-    & .hero-image>* {
+    & picture { height: 100%; }
+
+    & .hero-image {
       height: 100%;
       max-height: initial;
     }
