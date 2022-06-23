@@ -11,13 +11,14 @@
   "scripts": {
     "start": "cls && parcel serve src/pages/*.html",
     "build": "parcel build src/pages/*.html",
-    "clean": "rm -rf ./dist ./.cache ./.parcel-cache",
+    "serve": "serve -s ./dist",
     "type-check": "tsc --noEmit --watch",
     "sass-check": "sass --watch ./dist",
-    "serve": "serve -s ./dist",
-    "preremove": "echo \"removing all package-lock.json & node_modules\"",
-    "remove": "find . -name \"package-lock.json\" && find . -name \"package-lock.json\" | xargs rm -rf",
-    "postremove": "find . -name \"node_modules\" && find . -name \"node_modules\" | xargs rm -rf"
+    "clear": "rm -rf ./dist ./.cache ./.parcel-cache",
+    "del:0": "echo \"deleting all dependencies\"",
+    "del:1": "find . '(' '(' -name \"package-lock.json\" ')' -o '(' -name \"node_modules\" ')' ')'",
+    "del:2": "find . '(' '(' -name \"package-lock.json\" ')' -o '(' -name \"node_modules\" ')' ')' -prune -print -exec rm -rf '{}' +",
+    "delete": "npm run del:0 && npm run del:1 && npm run del:2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
@@ -41,7 +42,7 @@
     "cross-env": "^7.0.3",
     "parcel": "2.6.2",
     "postcss": "^8.4.14",
-    "postcss-preset-env": "^7.7.1",
+    "postcss-preset-env": "^7.7.2",
     "posthtml": "^0.16.6",
     "posthtml-expressions": "^1.9.0",
     "posthtml-include": "^1.7.4",
@@ -49,7 +50,7 @@
     "posthtml-modules": "^0.9.0",
     "process": "^0.11.10",
     "rimraf": "^3.0.2",
-    "sass": "^1.52.3",
+    "sass": "^1.53.0",
     "serve": "^13.0.2",
     "sharp": "^0.29.3",
     "svgo": "^2.8.0",

@@ -45,7 +45,9 @@
 - [ ] optimize thumbnail image
   - [ ] embedO
   - [ ] unfurling?
-  - [ ] https://oembed.com/
-  - [ ] https://api.slack.com/reference/messaging/link-unfurling#classic_unfurl
-  - [ ] https://math.icalculator.info/aspect-ratio-calculator.html
-  - [ ] https://influencermarketinghub.com/twitter-image-size/
+
+- links
+  - https://oembed.com/
+  - https://api.slack.com/reference/messaging/link-unfurling#classic_unfurl
+  - https://math.icalculator.info/aspect-ratio-calculator.html
+  - https://influencermarketinghub.com/twitter-image-size/
