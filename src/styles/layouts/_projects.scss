@@ -1,18 +1,10 @@
 @use '../abstracts/' as *;
 
-#projects {
-  width: 100%;
-  padding: 10rem 0;
-}
-
-#projects .section-heading {
-  margin-bottom: 5rem;
-}
-
 .all-projects {
   display: flex;
   flex-flow: column;
   gap: 9em;
+  align-items: center;
 }
 
 .p-item {

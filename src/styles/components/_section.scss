@@ -1,4 +1,7 @@
-// .section-caption {}
+section[id] {
+  width: 100%;
+  padding: 10rem 0;
+}
 
 .section-heading {
   // font-size: 5rem;
@@ -8,9 +11,11 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  margin-bottom: 5rem;
 }
 
 .section-subheading {
   font-size: 1.75rem;
   text-align: center;
+  margin-bottom: 1rem;
 }

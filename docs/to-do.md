@@ -35,3 +35,7 @@
 - [ ] scroll detect active section
   - [ ] when scrolling, set nav link as active
   - [ ] when passing section, update active nave link
+
+- [ ] scroll to the top button
+  - [ ] once it reaches to the bottom, hide
+  - [ ] at bottom, show gif, click to open easter egg link

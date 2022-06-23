@@ -6,20 +6,23 @@
 // #1800f3
 // #5924ed
 
+button.btn { padding-block: 0.65em; }
+a.btn { padding-block: 0.45em; }
+
 .btn {
 	font-size: 1.025rem;
-	padding: 0.45em 1.4em;
-	border-radius: 2ch;
+	border-radius: 3ch;
 	transition: all 0.25s ease;
-	
+	padding-inline: 1.4em;
+
+	&:hover {
+		transform: scale(1.03);
+	}
 	&:active {
 		background-color: #5a24ed38 !important;
 		color: #333 !important;
     letter-spacing: 2px;
   }
-	&:hover {
-		transform: scale(1.03);
-	}
 }
 
 .btn--primary {	
@@ -108,8 +111,6 @@ $btn-after: calc(0.1rem + 0.2rem);
 	& i {
 		position: absolute;
 		inset: 0 auto auto 0;
-		// top: 0;
-		// left: 0;
 		border-radius: 0.5rem 0 0 0.5rem;
 		background: #000;
 		color: #FFF;
@@ -134,9 +135,9 @@ $btn-after: calc(0.1rem + 0.2rem);
 }
 
 @include breakpoint (tablet_2) {
-	.btn--primary {
-		font-size: 1.125rem;
-	}
+	button.btn { padding: 0.55em 1.4em; }
+
+	.btn--primary, 
 	.btn--primary-outline {
 		font-size: 1.125rem;
 	}

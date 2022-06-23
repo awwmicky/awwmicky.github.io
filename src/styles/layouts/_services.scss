@@ -1,5 +1,37 @@
 @use '../abstracts/' as *;
 
+/* === system + process === */
+
+.all-process {
+  display: grid;
+  gap: 2em;
+  place-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.s-head {
+  margin-bottom: 0.5em;
+
+  & .s-title { font-size: 1.5rem; }
+}
+
+.s-body {
+  max-width: 50ch;
+}
+
+@include breakpoint (tablet_1) {
+  .all-process {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* === technologies + tools === */
+
+.technologies-tools {
+  margin-top: 4rem;
+}
+
 .all-tech {
   display: grid;
   gap: 2em;
