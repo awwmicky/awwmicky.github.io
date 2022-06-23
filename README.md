@@ -7,6 +7,14 @@
     <td>𝗙𝗿𝗼𝗻𝘁-𝗘𝗻𝗱 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 | 𝗨𝗜 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿</td>
   </tr>
   <tr>
+    <td>Portfolio</td>
+    <td><a 
+      target="_blank"
+      href="https://rebrand.ly/michael-f-alvarez__portfolio"
+    >aww-micky.web.app/
+    </a></td>
+  </tr>
+  <tr>
     <td>LinkedIn</td>
     <td><a 
       target="_blank"

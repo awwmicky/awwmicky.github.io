@@ -7,7 +7,7 @@
     "*.{ts,tsx}": [ "@parcel/transformer-typescript-tsc" ],
     "*.{sass,scss}": [ "@parcel/transformer-sass" ],
     "*.html": [ "@parcel/transformer-posthtml" ],
-    "url:*.svg": ["@parcel/transformer-svgo", "@parcel/transformer-raw"]
+    "url:*.{svg,png}": ["@parcel/transformer-svgo", "@parcel/transformer-raw"]
   },
   "optimizers": {
     "*.{css}": ["@parcel/optimizer-cssnano"],

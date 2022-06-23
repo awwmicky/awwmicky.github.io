@@ -39,3 +39,13 @@
 - [ ] scroll to the top button
   - [ ] once it reaches to the bottom, hide
   - [ ] at bottom, show gif, click to open easter egg link
+
+## Embed
+
+- [ ] optimize thumbnail image
+  - [ ] embedO
+  - [ ] unfurling?
+  - [ ] https://oembed.com/
+  - [ ] https://api.slack.com/reference/messaging/link-unfurling#classic_unfurl
+  - [ ] https://math.icalculator.info/aspect-ratio-calculator.html
+  - [ ] https://influencermarketinghub.com/twitter-image-size/
