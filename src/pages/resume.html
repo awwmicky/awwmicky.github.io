@@ -34,17 +34,17 @@
 <!-- JavaScript -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+  // const BASE_URL = window.location.origin
+  const PATH_NAME = '/up_/assets/docs/'
+  const FILE_NAME = 'michael-f-alvarez__resume.pdf'
   const result = confirm('Would you like to download my resume?')
+  // console.info('url ::', PATH_NAME, FILE_NAME)
+  
   if (!result) return
 
-  const BASE = window.location.origin
-  const PATH = '/up_/assets/docs/michael-f-alvarez__resume.pdf'
-  console.info('url ::', BASE, PATH)
   const link = document.createElement('a')
-  // link.href = BASE + PATH
-  // link.download = BASE + PATH
-  link.href = PATH
-  link.download = PATH
+  link.href = PATH_NAME + FILE_NAME
+  link.download = FILE_NAME
   link.dispatchEvent(new MouseEvent('click'))
 })
 </script>
