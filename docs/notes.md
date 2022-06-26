@@ -36,3 +36,7 @@
 
 - https://pagespeed.web.dev/
 - https://www.webpagetest.org/lighthouse
+
+## Website Meta Data
+
+- https://github.com/joshbuchea/HEAD

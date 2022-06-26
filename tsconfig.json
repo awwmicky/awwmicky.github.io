@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "outDir": "./dist",
+    "target": "esnext",
+    "module": "commonjs",
     "lib": ["ESNext","DOM"],
     "allowJs": true,
     "strict": true,
@@ -9,8 +10,11 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "removeComments": true,
+    "noImplicitAny": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node"
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
