@@ -39,10 +39,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const BASE = window.location.origin
   const PATH = '/up_/assets/docs/michael-f-alvarez__resume.pdf'
-  // console.info('url ::', BASE, PATH)
+  console.info('url ::', BASE, PATH)
   const link = document.createElement('a')
-  link.href = BASE + PATH
-  link.download = BASE + PATH
+  // link.href = BASE + PATH
+  // link.download = BASE + PATH
+  link.href = PATH
+  link.download = PATH
   link.dispatchEvent(new MouseEvent('click'))
 })
 </script>
