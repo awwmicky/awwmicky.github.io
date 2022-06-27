@@ -34,6 +34,11 @@
 - seo card
   - https://cards-dev.twitter.com/validator
   - https://developers.facebook.com/tools/debug/
+  - https://www.linkedin.com/post-inspector/inspect/
+  - https://developers.pinterest.com/tools/url-debugger/
+  - https://en.rakko.tools/tools/9/
+  - https://search.google.com/test/rich-results
+  - https://validator.schema.org/
 
 ```html
 <!-- Minimal -->
