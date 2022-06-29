@@ -18,6 +18,7 @@
   - jpg, png, webp, gif
 - resize thumbnail
   - ideal :: 600x300 | 1200x630
+  - recommend :: 1200×628
 
 ---
 
@@ -31,12 +32,17 @@
 - https://www.matuzo.at/blog/html-boilerplate/
 - https://gist.github.com/lancejpollard/1978404
 
+- seo validate
+  - https://www.coderstool.com/meta-tags-analyzer
+  - https://en.rakko.tools/tools/9/
+  - https://www.opengraph.xyz/
+  - https://metatags.io/
+
 - seo card
   - https://cards-dev.twitter.com/validator
   - https://developers.facebook.com/tools/debug/
   - https://www.linkedin.com/post-inspector/inspect/
   - https://developers.pinterest.com/tools/url-debugger/
-  - https://en.rakko.tools/tools/9/
   - https://search.google.com/test/rich-results
   - https://validator.schema.org/
 
