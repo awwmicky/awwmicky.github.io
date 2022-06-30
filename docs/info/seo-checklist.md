@@ -1,24 +1,25 @@
 # SEO Checklist
 
-## Embed Metadata
+## Ideal Content Info
 
-- title: max 70 char
-- description
-  - 2 ~ 4 sentences
-  - max 200 char
-- image
-  - 1.91:1 aspect ratio
-  - 200x150, 600x315, 900x472.5, 1200x630
-  - 1.5 * #
-  - 1mb ~ 5mb
-- thumbnail
-  - 2:1 aspect ratio
-  - 300x157
-  - 5mb -
-  - jpg, png, webp, gif
-- resize thumbnail
-  - ideal :: 600x300 | 1200x630
-  - recommend :: 1200×628
+- title :: max 70 char
+- description :: max 200 char
+
+## Ideal Thumbnail Image
+
+- aspect ratio → 16:9 → 1.91:1 → 1200x627
+- image type → jpg, png, webp, gif
+- image size → max 5mb
+- example
+  - 200x150, 300x157, 600x315, 640x480, 900x472.5, 1200x630
+
+## SEO Metadata Outputs
+
+- https://www.coderstool.com/meta-tags-analyzer
+- https://en.rakko.tools/tools/9/
+- https://www.opengraph.xyz/
+- https://metatags.io/
+
 
 ---
 
@@ -31,12 +32,6 @@
 - https://devhints.io/html-meta
 - https://www.matuzo.at/blog/html-boilerplate/
 - https://gist.github.com/lancejpollard/1978404
-
-- seo validate
-  - https://www.coderstool.com/meta-tags-analyzer
-  - https://en.rakko.tools/tools/9/
-  - https://www.opengraph.xyz/
-  - https://metatags.io/
 
 - seo card
   - https://cards-dev.twitter.com/validator
