@@ -43,20 +43,22 @@
   >Go Back</a>
 </object>
 <!-- JavaScript -->
-<script>
+<script defer>
 document.addEventListener("DOMContentLoaded", () => {
-  // const BASE_URL = window.location.origin
-  const PATH_NAME = '/up_/assets/docs/'
-  const FILE_NAME = 'michael-f-alvarez__resume.pdf'
-  const result = confirm('Would you like to download my resume?')
-  // console.info('url ::', PATH_NAME, FILE_NAME)
-  
-  if (!result) return
+  setTimeout(() => {
+    // const BASE_URL = window.location.origin
+    const PATH_NAME = '/up_/assets/docs/'
+    const FILE_NAME = 'michael-f-alvarez__resume.pdf'
+    const result = confirm('Would you like to download my resume?')
+    // console.info('url ::', PATH_NAME, FILE_NAME)
+    
+    if (!result) return
 
-  const link = document.createElement('a')
-  link.href = PATH_NAME + FILE_NAME
-  link.download = FILE_NAME
-  link.dispatchEvent(new MouseEvent('click'))
+    const link = document.createElement('a')
+    link.href = PATH_NAME + FILE_NAME
+    link.download = FILE_NAME
+    link.dispatchEvent(new MouseEvent('click'))
+  }, 1000)
 })
 </script>
 </body>

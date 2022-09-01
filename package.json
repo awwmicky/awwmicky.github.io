@@ -2,9 +2,6 @@
   "version": "0.0.0",
   "name": "portfolio",
   "license": "MIT",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "start": "clear && parcel serve src/pages/*.html",
     "build": "parcel build src/pages/*.html",
@@ -44,7 +41,7 @@
     "posthtml-modules": "^0.9.0",
     "process": "^0.11.10",
     "rimraf": "^3.0.2",
-    "sass": "^1.54.5",
+    "sass": "^1.54.8",
     "serve": "^14.0.1",
     "sharp": "0.29.3",
     "svgo": "^2.8.0",
