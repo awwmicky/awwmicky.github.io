@@ -4,14 +4,14 @@
 <tbody>
   <tr>
     <td>My Role</td>
-    <td>𝗙𝗿𝗼𝗻𝘁-𝗘𝗻𝗱 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 | 𝗨𝗜 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿</td>
+    <td>𝗙𝗿𝗼𝗻𝘁-𝗘𝗻𝗱 𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿</td>
   </tr>
   <tr>
     <td>Portfolio</td>
     <td><a 
       target="_blank"
-      href="https://rebrand.ly/michael-f-alvarez__portfolio"
-    >aww-micky.web.app/
+      href="https://rebrand.ly/michael-fred-alvarez__portfolio"
+    >aww-micky.web.app
     </a></td>
   </tr>
   <tr>
@@ -50,7 +50,7 @@
     <td>Phone</td>
     <td><a 
       target="_self"
-      href="https://rebrand.ly/michael-f-alvarez__phone"
+      href="https://rebrand.ly/michael-fred-alvarez__phone"
     >650-260-8682
     </a></td>
   </tr>
@@ -59,7 +59,7 @@
     <td><a 
       target="_blank"
       rel="noopener noreferrer"
-      href="https://rebrand.ly/michael-f-alvarez__resume"
+      href="https://rebrand.ly/michael-fred-alvarez__resume"
     >view resume
     </a></td>
   </tr>
@@ -68,7 +68,7 @@
     <td><a 
       target="_blank" 
       rel="noopener noreferrer"
-      href="https://calendly.com/michael-f-alvarez/meetup"
+      href="https://calendly.com/michael-fred-alvarez/session"
     >set appointment
     </a></td>
   </tr>
@@ -77,7 +77,7 @@
     <td><a 
       target="_blank" 
       rel="noopener noreferrer"
-      href="https://rebrand.ly/michael-f-alvarez__social"
+      href="https://rebrand.ly/michael-fred-alvarez__social"
     >@awwmicky
     </a></td>
   </tr>
@@ -86,7 +86,7 @@
     <td><a 
       target="_blank" 
       rel="noopener noreferrer"
-      href="https://www.google.com/maps/place/Bay+Area,+CA"
+      href="https://google.com/maps/place/Bay+Area,+CA"
     >Bay Area, CA
     </a></td>
   </tr>
