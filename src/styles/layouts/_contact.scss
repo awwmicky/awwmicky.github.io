@@ -15,6 +15,7 @@
   align-items: center;
 
   & .b-intro {
+    color: #5924ed;
     font-size: 0.9rem;
   }
 
@@ -34,7 +35,7 @@
 @include breakpoint (tablet_1) {
   .banner {
     & .b-intro {
-      font-size: 1.125rem;
+      font-size: 1rem;
     }
 
     & .b-heading {

@@ -5,14 +5,11 @@ const viewItem = (e: MouseEvent): void => {
   const btn = e.target as HTMLButtonElement
   
   switch (btn.dataset.id) {
-    case 'projects':
-      window.location.href = '/#projects'
+    case 'resume':
+      redirect(RESUME, '_blank')
     break;
     case 'contact':
       window.location.href = '/#contact'
-    break;
-    case 'resume':
-      redirect(RESUME, '_blank')
     break;
     case 'appointment':
       redirect(APPOINTMENT, '_blank')

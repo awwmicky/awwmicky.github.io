@@ -42,8 +42,8 @@
     <td>Email</td>
     <td><a 
       target="_self"
-      href="mailto:m-f-alvarez@outlook.com"
-    >m-f-alvarez@outlook.com
+      href="mailto:michael@awwmicky.space"
+    >michael@awwmicky.space
     </a></td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@
     <td><a 
       target="_self"
       href="https://rebrand.ly/michael-fred-alvarez__phone"
-    >650-260-8682
+    >650-520-9814
     </a></td>
   </tr>
   <tr>

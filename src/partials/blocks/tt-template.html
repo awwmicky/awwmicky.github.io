@@ -1,8 +1,5 @@
-<div id="{{ id }}" class="t-item">
-  <div class="t-head">
-    <h4 class="t-title">{{ title }}</h4>
-    <h4 class="t-caption">{{ caption }}</h4>
-  </div>
+<div id="technologies-tools-{{ id }}" class="t-item">
+  <h4 class="t-title">{{ title }}</h4>
 
   <div class="t-body">
     <each loop="item in {{ tech }}">
@@ -12,7 +9,7 @@
         target="_blank" 
         rel="noopener noreferrer" 
         href="{{ item.link }}"
-      ><icon src="../assets/svgs/{{ id }}/{{ item.title.toLowerCase().replace(/[\s\.]/, '-') }}.svg"></icon>
+      ><icon src="../assets/svgs/{{ id }}/{{ item.title.toLowerCase().replace(/[\s\.]/g, '-') }}.svg"></icon>
       </a>
     </each>
   </div>

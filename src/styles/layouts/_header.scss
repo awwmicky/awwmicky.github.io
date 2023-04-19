@@ -14,7 +14,7 @@ header > div {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 0.5rem;
-  padding-top: 1em;
+  padding-block-start: 1em;
 }
 
 .logo {
@@ -32,6 +32,7 @@ header > div {
 .navbar {
   grid-area: 2 / 1 / 2 / 5;
   display: flex;
+  place-items: center;
   place-content: space-around;
 
   a {
@@ -61,19 +62,19 @@ header > div {
   grid-area: 1 / 4 / 1 / 5;
   display: flex;
   place-items: center;
-  place-content: space-around;
-  gap: 0.5em;
+  place-content: flex-end;
+  gap: 0.75em;
 }
 
 @include breakpoint (tablet_1) {
   .logo h1 { display: block; }
 }
 
-@include breakpoint (desktop) {
+@include breakpoint (tablet_2) {
   header > div {
     grid-template-rows: 1fr;
-    gap: 2rem 0;
-    padding: 2rem 0 1rem;
+    gap: 2rem;
+    padding-block: 1rem;
   }
 
   .logo {
@@ -82,13 +83,13 @@ header > div {
 
   .navbar {
     grid-area: 1 / 2 / 2 / 4;
+    place-content: center;
+    gap: 2em;
     a { padding: 0; }
   }
 
   .quick-links {
     grid-area: 1 / 4 / 2 / 5;
-    place-content: flex-end;
-    gap: 2em;
   }
 }
 

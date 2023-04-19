@@ -12,8 +12,8 @@ a.btn { padding-block: 0.45em; }
 .btn {
 	font-size: 1.025rem;
 	border-radius: 3ch;
-	transition: all 0.25s ease;
 	padding-inline: 1.4em;
+	transition: all 0.25s ease;
 
 	&:hover {
 		transform: scale(1.03);
@@ -23,14 +23,16 @@ a.btn { padding-block: 0.45em; }
 		color: #333 !important;
     letter-spacing: 2px;
   }
+
+	& > * { vertical-align: middle; }
+	& .fa-external-link-alt { font-size: 1rem; }
+	& .fa-github-square { font-size: 1.4rem; }
 }
 
 .btn--primary {	
 	border: transparent;
 	background: #5924ed;
 	color: #FFF;
-
-  i { font-size: 1.6rem; }
 
 	&:hover {
 		background-color: #7442ff;
@@ -42,8 +44,6 @@ a.btn { padding-block: 0.45em; }
 	border: 2px solid #5924ed;
 	color: #5924ed;
 
-  i { font-size: 1.2rem; }
-	
 	&:hover {
 		color: #FFF;
 		background-color: #5924ed;

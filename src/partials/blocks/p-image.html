@@ -1,0 +1,44 @@
+<if condition="false">
+  <img 
+    class="{{ class }}" 
+    src="{{ img }}" 
+    alt="{{ alt }}"
+  />
+</if>
+
+<else>
+  <picture>
+    <source 
+      type="image/png" 
+      media="(min-width: 1024px)"
+      srcset="
+        {{ img_desktop }}?width=375 375w,
+        {{ img_desktop }}?width=768 768w,
+        {{ img_desktop }}?width=1024 1024w
+      " 
+    />
+    <source 
+      type="image/png" 
+      media="(min-width: 768px)"
+      srcset="
+        {{ img_tablet }}?width=375 375w,
+        {{ img_tablet }}?width=768 768w,
+        {{ img_tablet }}?width=1024 1024w
+      " 
+    />
+    <source 
+      type="image/png" 
+      media="(min-width: 375px)"
+      srcset="
+        {{ img_mobile }}?width=375 375w,
+        {{ img_mobile }}?width=768 768w,
+        {{ img_mobile }}?width=1024 1024w
+      " 
+    />
+    <img 
+      class="{{ class }}" 
+      src="{{ img_mobile }}?width=375" 
+      alt="{{ alt }}" 
+    />
+  </picture>
+</else>

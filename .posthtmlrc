@@ -11,14 +11,15 @@
     },
     "posthtml-expressions": {
       "locals": {
+        "tagline": "I build digital solutions for SaaS products & B2B marketing.",
         "social_link": {
           "linkedin": "https://linkedin.com/in/awwmicky",
           "twitter": "https://twitter.com/awwmicky",
           "github": "https://github.com/awwmicky"
         },
         "contact_info": {
-          "email": "m-f-alvarez@outlook.com",
-          "phone": "650-260-8682",
+          "email": "michael@awwmicky.space",
+          "phone": "650-520-9814",
           "resume": "https://rebrand.ly/michael-fred-alvarez__resume",
           "calendly": "https://calendly.com/michael-fred-alvarez/session",
           "social": "https://rebrand.ly/michael-fred-alvarez__social",

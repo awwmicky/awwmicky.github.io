@@ -1,8 +1,8 @@
 import { 
-  $workBtn,
-  $resumeBtn,
-  $contactBtn,
-  $appointmentBtn,
+  $heroResumeBtn,
+  $heroEmailBtn,
+  $aboutResumeBtn,
+  $aboutScheduleBtn,
   $emailLink, 
   $phoneLink,
 } from './constants'
@@ -11,10 +11,10 @@ import {
   contactOutput, 
 } from './events'
 
-$workBtn.addEventListener('click', viewItem)
-$resumeBtn.addEventListener('click', viewItem)
-$contactBtn.addEventListener('click', viewItem)
-$appointmentBtn.addEventListener('click', viewItem)
+$heroResumeBtn.addEventListener('click', viewItem)
+$heroEmailBtn.addEventListener('click', viewItem)
+$aboutResumeBtn.addEventListener('click', viewItem)
+$aboutScheduleBtn.addEventListener('click', viewItem)
 
 $emailLink.addEventListener('click', contactOutput)
 $phoneLink.addEventListener('click', contactOutput)

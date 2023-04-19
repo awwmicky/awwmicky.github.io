@@ -1,0 +1,61 @@
+<div id="project-{{ id }}" class="ss p-item">
+  <div class="mockup">
+    <div class="mockup__top-bar">
+      <span class="mockup__bar-acc"></span>
+    </div>
+
+    <div class="mockup__screenshot">
+      <include src="../partials/blocks/p-image.html">
+        {
+          "class"       : "mockup__image",
+          "img_desktop" : "../assets/images/projects/{{ title.toLowerCase().replace(/[\s\.]/g, '-') }}--desktop.png",
+          "img_tablet"  : "../assets/images/projects/{{ title.toLowerCase().replace(/[\s\.]/g, '-') }}--tablet.png",
+          "img_mobile"  : "../assets/images/projects/{{ title.toLowerCase().replace(/[\s\.]/g, '-') }}--mobile.png",
+          "alt"         : "project-mockup-screenshot"
+        }
+      </include>
+    </div>
+  </div>
+
+  <div class="p-content">
+    <h3 class="p-content__title">{{ title }}</h3>
+    <h4 class="p-content__caption">{{ caption }}</h4>
+    <p class="p-content__desc">{{ description }}</p>
+
+    <details class="p-accordion">
+      <summary class="p-accordion__title">
+        <b>Read More</b>
+      </summary>
+      <dl class="p-accordion__details">
+        <dt class="p-accordion__subtitle">Roles</dt>
+        <dd class="p-accordion__sublist">{{ roles }}</dd>
+        <!-- <br /> -->
+        <dt class="p-accordion__subtitle">Tech</dt>
+        <dd class="p-accordion__sublist">{{ tech }}</dd>
+      </dl>
+    </details>
+
+    <div class="p-actions">
+      <a 
+        role="button" 
+        target="_blank"
+        rel="noopener noreferrer"
+        href="{{ live_preview }}"
+        class="btn btn--primary" 
+      >
+        <span>Live Preview</span>
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+      <a 
+        role="button" 
+        target="_blank"
+        rel="noopener noreferrer"
+        href="{{ source_code }}"
+        class="btn btn--primary-outline" 
+      >
+        <span>Source Code</span>
+        <i class="fab fa-github-square"></i>
+      </a>
+    </div>
+  </div>
+</div>

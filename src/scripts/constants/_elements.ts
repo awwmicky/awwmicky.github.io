@@ -1,10 +1,10 @@
 import { $ } from '../utilities'
 // { $, $$, print }
 
-export const $workBtn = $<HTMLButtonElement>('[data-id="projects"]')
-export const $contactBtn = $<HTMLButtonElement>('[data-id="contact"]')
-export const $resumeBtn = $<HTMLButtonElement>('[data-id="resume"]')
-export const $appointmentBtn = $<HTMLButtonElement>('[data-id="appointment"]')
+export const $heroResumeBtn = $<HTMLButtonElement>('#hero [data-id="resume"]')
+export const $heroEmailBtn = $<HTMLButtonElement>('#hero [data-id="contact"]')
+export const $aboutResumeBtn = $<HTMLButtonElement>('#about [data-id="resume"]')
+export const $aboutScheduleBtn = $<HTMLButtonElement>('#about [data-id="appointment"]')
 
 export const $emailLink = $<HTMLButtonElement>('.email-link')
 export const $phoneLink = $<HTMLButtonElement>('.phone-link')

@@ -1,51 +1,38 @@
-<div id="{{ id }}" class="p-item {{ order }}">
-  <div class="left p-thumbnail">
-    <img 
-      class="p-image" 
-      src="../assets/images/projects/{{ id }}.png" 
-      alt="{{ id }}-thumbnail" 
-    />
-  </div>
-
-  <div class="right p-content">
-    <h3 class="p-title">{{ title }}</h3>
-    <h4 class="p-caption">{{ caption }}</h4>
-    <p class="p-desc">{{ description }}</p>
-
-    <details class="p-accordion">
-      <summary class="p-accordion-title">
-        <b>Read More</b>
-      </summary>
-      <dl class="p-accordion-details">
-        <dt>Roles :</dt>
-        <dd>{{ roles }}</dd>
-        <br />
-        <dt>Tech :</dt>
-        <dd>{{ tech }}</dd>
-      </dl>
-    </details>
-
-    <div class="p-options">
-      <a 
-        role="button" 
-        target="_blank"
-        rel="noopener noreferrer"
-        href="{{ source_code }}"
-        class="btn btn--primary" 
-      >
-        <span>Source Code</span>
-        <i class="fab fa-github-square"></i>
-      </a>
-      <a 
-        role="button" 
-        target="_blank"
-        rel="noopener noreferrer"
-        href="{{ live_preview }}"
-        class="btn btn--primary-outline" 
-      >
-        <span>Live Preview</span>
-        <i class="fas fa-external-link-alt"></i>
-      </a>
-    </div>
-  </div>
+<div class="all-projects">
+  <include src="../partials/blocks/p-template.html">
+    {
+      "id"           : 1,
+      "title"        : "Audiophile",
+      "caption"      : "An e-commerce app as a UI prototype, ready for implementing CMS content.",
+      "description"  : "Our goal is to build a template designed to handle any content you apply while ensuring each product page details can scale.",
+      "roles"        : "Front-End Engineer",
+      "tech"         : "TypeScript - Next.js - React - TailwindCSS - Radix UI - EasyPeasy - Stripe",
+      "source_code"  : "https://github.com/awwmicky/audiophile",
+      "live_preview" : "https://audiophile--web.vercel.app/"
+    }
+  </include>
+  <include src="../partials/blocks/p-template.html">
+    {
+      "id"           : 2,
+      "title"        : "Frisko Wave",
+      "caption"      : "An e-commerce app with Headless CMS, updating product content in real-time.",
+      "description"  : "Our goal is to configure a schema between customers, editors, and developers; it manages data for a seamless content experience.",
+      "roles"        : "Front-End Engineer",
+      "tech"         : "TypeScript - Next.js - React - TailwindCSS - Next UI - Zustand - Sanity - Stripe",
+      "source_code"  : "https://github.com/awwmicky/frisko-wave",
+      "live_preview" : "https://frisko-wave--web.vercel.app/"
+    }
+  </include>
+  <include src="../partials/blocks/p-template.html">
+    {
+      "id"           : 3,
+      "title"        : "RATA Call",
+      "caption"      : "A productivity app, simplified to request and record any RESTful API calls.",
+      "description"  : "Our goal is to remake a minimal devtool for testing APIs and caching every request/response data entry ready for later use.",
+      "roles"        : "Front-End Engineer",
+      "tech"         : "TypeScript - Vite - React - Mantine UI - React Query - React Hook Form - React Router - Zustand",
+      "source_code"  : "https://github.com/awwmicky/rata-call",
+      "live_preview" : "https://rata-call-web.netlify.app/"
+    }
+  </include>
 </div>
